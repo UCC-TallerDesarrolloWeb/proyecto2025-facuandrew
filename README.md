@@ -1,6 +1,44 @@
 # proyecto2025
 Estructura de Proyecto Taller de Desarrollo Web - 2025
 
+## Indice - Markdown ::
+## PRIMER PARCIAL ::
+- [Titulo Proyecto](#Titulo-Proyecto) 
+- [Autores](#Autores)
+- [Link de gh-pages](#Link-de-gh-pages)
+- [contenido de la pagina](#contenido-de-la-pagina)
+- [listado de tecnologias usadas](#listado-de-tecnologias-usadas) 
+- [Requisitos del Primer Parcial](#Requisitos-del-Primer-Parcial)
+- [Sobre el Sketch](#Sobre-el-Sketch)
+- [Sobre el Wireframe Mockup](#Sobre-el-Wireframe-Mockup)
+- [Sobre el Repositorio](#Sobre-el-Repositorio)
+- [Sobre el Proyecto General](#Sobre-el-Proyecto-General)
+- [Sobre el HTML](#Sobre-el-HTML)
+- [Sobre las imágenes](#Sobre-las-imágenes)
+- [Sobre el CSS](#Sobre-el-CSS)
+- [Sobre Accesibilidad](#Sobre-Accesibilidad)
+- [Sobre la funcionalidad JavaScript](#Sobre-la-funcionalidad-JavaScript)
+- [Sobre la documentación](#Sobre-la-documentación)
+- [Testing](#Testing)
+- [Sobre las correcciones](#Sobre-las-correcciones)
+- 
+## Titulo Proyecto
+Pagina Web :: Escuela de Escalada en Roca
+
+## Autores
+Garcia Andrew 2464112
+Carattoli Facudo 2418100
+
+## Link de gh-pages
+[PONER LINK REPOSITORIO GITHUB PARA ENCONTRARLO MAS FACIL Y DIRECTO]
+
+## contenido de la pagina
+
+## listado de tecnologias usadas
+- HTML
+- CSS 
+- JavaScript 
+
 ## Requisitos del Primer Parcial
 
 ### Sobre el Sketch
@@ -16,7 +54,7 @@ Tener en cuenta:
 * ¿Qué acciones le permiten al usuario realizar?
 * Mensajes de Error
 
-### Sobre el Wireframe/Mockup
+### Sobre el Wireframe Mockup
 - [ ] Dibujado con algún programa como: Figma, AdobeXD, Canvas, Draw.io en Drive, Pencil Project, Mockups, NinjaMock, o similares.
 - [ ] Diseño de Mensajes de error para el usuario
 - [ ] Versión Desktop y Mobile
@@ -31,7 +69,7 @@ Tener en cuenta:
 - [ ] Publicar la Web empleando GitHubPages
 - [ ] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc ni .DS_Store, en todo caso emplear **.gitignore**)
 
-### Sobre el Proyecto General
+## Sobre el Proyecto General
 - [ ] La página principal debe llamarse index
 - [ ] NO está permitido descargar un TEMPLATE (diseño 100% desde cero)
 - [ ] La estructura del proyecto debe ser adecuada
