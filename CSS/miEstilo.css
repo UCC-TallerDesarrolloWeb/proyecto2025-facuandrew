@@ -1,0 +1,34 @@
+#encabezadoIndex{
+    display: flex;
+    align-items: center;
+    background-color: #0b0808;
+}
+
+#menu{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+#nombreEscuela{
+    color: #c1b72b;
+    text-align: center;
+    margin-left: 18%;
+    font-size: 350%;
+}
+
+section{
+    text-align: center;
+}
+
+#encabezadoRutas{
+    text-align: center;
+}
+
+.inputRutas{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+
