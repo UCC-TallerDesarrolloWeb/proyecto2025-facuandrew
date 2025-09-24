@@ -30,7 +30,7 @@ Garcia Andrew 2464112
 Carattoli Facudo 2418100
 
 ## Link de gh-pages
-[PONER LINK REPOSITORIO GITHUB PARA ENCONTRARLO MAS FACIL Y DIRECTO]
+https://github.com/UCC-TallerDesarrolloWeb/proyecto2025-facuandrew
 
 ## contenido de la pagina
 
@@ -39,11 +39,10 @@ Carattoli Facudo 2418100
 - CSS 
 - JavaScript 
 
-## Requisitos del Primer Parcial
-
+## REQUISITOS PRIMER PARCIAL
 ### Sobre el Sketch
 - [ ] Versión Desktop y Mobile
-- [ ] Guardado en formato PNG, JPG ó PDF
+- [ x ] Guardado en formato PNG, JPG ó PDF
 - [ ] Dentro de una carpeta llamada "Sketch"
 - [ ] En el diseño tener en cuenta los mensajes de error para el usuario
 
@@ -55,22 +54,22 @@ Tener en cuenta:
 * Mensajes de Error
 
 ### Sobre el Wireframe Mockup
-- [ ] Dibujado con algún programa como: Figma, AdobeXD, Canvas, Draw.io en Drive, Pencil Project, Mockups, NinjaMock, o similares.
+- [ x ] Dibujado con algún programa como: Figma, AdobeXD, Canvas, Draw.io en Drive, Pencil Project, Mockups, NinjaMock, o similares.
 - [ ] Diseño de Mensajes de error para el usuario
 - [ ] Versión Desktop y Mobile
 - [ ] Guardado en formato PNG, JPG ó PDF
 - [ ] Dentro de una carpeta llamada "Wireframe" ó "Mockup"
 
 ### Sobre el Repositorio
-- [ ] El proyecto debe estar subido al repositorio adecuado "Proyecto2025-ApellidoAlumno1-ApellidoAlumno2"
+- [ x ] El proyecto debe estar subido al repositorio adecuado "Proyecto2025-ApellidoAlumno1-ApellidoAlumno2"
 - [ ] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
-- [ ] En el **readme.md** se debe emplear Markdown y aplicar negrita, titulo de orden 1, 2 y 3, link, items, tabla, index a cada sección
-- [ ] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
+- [ x ] En el **readme.md** se debe emplear Markdown y aplicar negrita, titulo de orden 1, 2 y 3, link, items, tabla, index a cada sección
+- [ x ] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
 - [ ] Publicar la Web empleando GitHubPages
-- [ ] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc ni .DS_Store, en todo caso emplear **.gitignore**)
+- [ x ] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc ni .DS_Store, en todo caso emplear **.gitignore**)
 
 ## Sobre el Proyecto General
-- [ ] La página principal debe llamarse index
+- [ x ] La página principal debe llamarse index
 - [ ] NO está permitido descargar un TEMPLATE (diseño 100% desde cero)
 - [ ] La estructura del proyecto debe ser adecuada
       - Crear una carpeta para las imágenes
@@ -91,9 +90,9 @@ Tener en cuenta:
 ### Sobre el HTML
 - [ ] Todas las etiquetas deben estar en minúscula
 - [ ] Poner comillas a todos los atributos
-- [ ] Title debe contener el título de la página
-- [ ] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave
-- [ ] Emplear al menos 3 etiquetas semánticas diferentes (header, nav, aside, main, section, article, footer)
+- [ x ] Title debe contener el título de la página
+- [ x ] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave
+- [ x ] Emplear al menos 3 etiquetas semánticas diferentes (header, nav, aside, main, section, article, footer)
 - [ ] Emplear ```<header></header>```. En el contenido de la cabecera debe haber un título ```<h1></h1>```, puede tener color de fondo, algún logotipo, etc.
 - [ ] Debe haber por lo menos una etiqueta ```<img>``` en la página.
 - [ ] La estructura de la página debe estar definida con ```<div></div>```
