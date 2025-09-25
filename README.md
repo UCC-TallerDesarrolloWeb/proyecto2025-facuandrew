@@ -114,18 +114,18 @@ Tener en cuenta:
 - [ ] Las imágenes deben poseer un nombre representativo 
 
 ### Sobre el CSS
-- [ ] El estilo de los elementos debe establecerse en un archivo CSS (prohibido poner el atributo style a los elementos o emplear estilos incrustados).
-- [ ] El CSS debe contar mínimo con un tipo de cada forma (por Tag, por ID y por clase).
-- [ ] Se debe emplear pseudoclase
+- [X] El estilo de los elementos debe establecerse en un archivo CSS (prohibido poner el atributo style a los elementos o emplear estilos incrustados).
+- [X] El CSS debe contar mínimo con un tipo de cada forma (por Tag, por ID y por clase).
+- [X] Se debe emplear pseudoclase
 - [ ] No emplear !important
 - [ ] El diseño de la página debe ser consistente
 - [ ] En la primera etapa debe existir un único archivo CSS (se debe evitar código duplicado. Se debe aplicar re-utilización de código/estilos)
 
 ### Sobre Accesibilidad:
 - [ ] Toda imagen debe tener su etiqueta alt
-- [ ] Todo ```<input>``` o ```<select>``` debe tener su ```<label>```
-- [ ] Los labels deben contener el atributo **for** (el for debe contener el id del input al cual se referencia) 
-- [ ] Si hay una tabla en la página, debe contener ```<caption></caption>```
+- [X] Todo ```<input>``` o ```<select>``` debe tener su ```<label>```
+- [X] Los labels deben contener el atributo **for** (el for debe contener el id del input al cual se referencia) 
+- [] Si hay una tabla en la página, debe contener ```<caption></caption>```
 
 ### Sobre la funcionalidad JavaScript
 Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada

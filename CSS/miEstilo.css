@@ -10,6 +10,10 @@
     padding: 10px;
 }
 
+button:hover{
+        background-color: #6f6faa;
+}
+
 #nombreEscuela{
     color: #c1b72b;
     text-align: center;
@@ -30,5 +34,30 @@ section{
     margin-bottom: 1%;
 }
 
+.imgGeneral{
+    border: 10px solid black;
+    width: 500px;
+    height: 500px;
+    /*margin: 0px 0px 0px 30%;*/
+}
+.ruta{
+    margin: 5%;
+    text-align: center;
+}
 
+.tituloLugar{
+    text-align: center;
+}
+
+fieldset{
+    display: flex;
+    margin: 4%;
+}
+
+.tituloCurso1{
+    text-align: center;
+    background-color: #f60000;
+    color: #cfc71e;
+    font-family: Arial, Helvetica, sans-serif;
+}
 

@@ -13,22 +13,52 @@
     <header id="encabezadoRutas">
         <h1>Rutas de Escalada y Trekking</h1>
     </header>
-    <select name="dificultadRutas">
+    <label for="dificultadRutas">Dificultad de la Ruta:</label>
+    <select name="dificultadRutas" id="dificultadRutas" >
         <option value="facil">Facil</option>
         <option value="medio">Medio</option>
         <option value="dificil">Dificil</option>
     </select>
     <br>
-        <input type="search" placeholder="Provincia..." size="17" maxlength="20" class="inputRutas">
+        <label name="buscaProvincia">Busca por Provincia:</label>
+        <input type="search" name="buscaProvincia" placeholder="Provincia..." size="28" maxlength="20" class="inputRutas">
     </br>
 
     <main>
         <article class="ruta">
-            <img src="../Imagenes/los_mogotes.jpg" alt="Los Mogotes - Capilla del Monte">
-            <h2>Los Mogotes </h2>
+            <h2 class="tituloLugar">Los Mogotes</h2>
+            <img src="../Imagenes/los_mogotes.jpg" alt="Los Mogotes - Capilla del Monte" class="imgGeneral">
             <p><strong>Provincia:</strong> Córdoba</p>
             <p><strong>Dirección:</strong> Ruta Provincial E66, km 15</p>
             <p><strong>Cómo llegar:</strong> <a href=https://maps.app.goo.gl/dnxzj2XUt4ZZtwsc6>Ruta desde Cordoba</a></p>
+            <p><strong>Dificultad:</strong> Dificil</p>
+            <div class="comentarios">
+                <h3>Comentarios</h3>
+                <textarea placeholder="Deja tu comentario aquí..."></textarea>
+                <button type="button">Enviar</button>
+            </div>
+        </article>
+
+        <article class="ruta">
+            <h2 class="tituloLugar">Cuesta del Chihuido </h2>
+            <img src="../Imagenes/Mendoza_Malargue_cuestaDelChihuido.jpg" alt="Malargue Pcia Mendoza - Cuesta del Chihuido" class="imgGeneral">
+            <p><strong>Provincia:</strong> Mendoza</p>
+            <p><strong>Dirección:</strong> Ruta Nacional 40, km 2910</p>
+            <p><strong>Cómo llegar:</strong> <a href=https://maps.app.goo.gl/hBKn4rFUgWrixrSU6>Ruta desde Cordoba</a></p>
+            <p><strong>Dificultad:</strong> Facil</p>
+            <div class="comentarios">
+                <h3>Comentarios</h3>
+                <textarea placeholder="Deja tu comentario aquí..."></textarea>
+                <button type="button">Enviar</button>
+            </div>
+        </article>
+
+        <article class="ruta">
+            <h2 class="tituloLugar">Frey</h2>
+            <img src="../Imagenes/RioNegro_Bariloche.jpg" alt="Frey - Bariloche - Rio Negro" class="imgGeneral">
+            <p><strong>Provincia:</strong> Rio Negro</p>
+            <p><strong>Dirección:</strong> Parque Nacional Nahuel Huapi</p>
+            <p><strong>Cómo llegar:</strong> <a href=https://maps.app.goo.gl/UaKCRvieRZd5mtys8>Ruta desde Cordoba</a></p>
             <p><strong>Dificultad:</strong> Medio</p>
             <div class="comentarios">
                 <h3>Comentarios</h3>
@@ -36,6 +66,7 @@
                 <button type="button">Enviar</button>
             </div>
         </article>
+
     </main>
 
 </body>
