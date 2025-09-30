@@ -65,7 +65,7 @@ main div {
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
-    background-color: #b16262;
+    background-color: #baa7a7;
 }
 
 div img{
@@ -81,6 +81,7 @@ div button{
     grid-template-areas:
                    "header header header header"
                    " aside main main main";
+    background-color: #919067;
 }
 
 .item1 {

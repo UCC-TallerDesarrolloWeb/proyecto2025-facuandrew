@@ -7,9 +7,10 @@
     <meta content="web Escuela Escalada en Roca" name="descripcion">
     <meta content="trekking, escalada, cursos, salidas, rutas" name="palabras-claves">
     <link href="../CSS/miEstilo.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../JavaScript/cursos.js" ></script>
 </head>
 
-<body class="contenedor">
+<body class="contenedor" onload="cargarCursos()">
 
 <header class="item1">
     <h1>Cursos y Salidas Guiadas</h1>
@@ -50,7 +51,6 @@
             </p>
         </fieldset>
 
-
         <select id="order">
             <option disabled value="">Seleccione un Orden</option>
             <option value="menor">Precio - de menor a mayor</option>
@@ -61,51 +61,57 @@
     </form>
 </aside>
 
-<main class="item3" id="catalogoCursos">
-    <div class="curso">
-        <img src="../Imagenes/cursoIntermedio.jpg" alt="Curso de Iniciación Escalada en Roca">
-        <h4>Curso Iniciación Escalada en Roca</h4>
-        <p>Aprenderás las técnicas básicas para iniciarte en la escalada con seguridad.</p>
-        <p class="precio">$65.000</p>
-        <br><button class="agregar-carrito">Agregar al carrito</button></br>
-        <button id="botonDetalleCursoIniciante">Ver Detalle</button>
-    </div>
+<dialog id="modal1">
+    <h2>Detalle Curso Iniciacion</h2>
+    <p>Objetivos del curso: Que los alumnos obtengan todos los conocimientos teóricos y prácticos para poder ejecutar escaladas en montañas de roca vertical, mediante la progresión en libr y aseguramiento con empotradores.</p>
+    <button type="button" onclick="cerrarModal1()">Cerrar</button>
+</dialog>
 
-    <div>
-        <img src="../Imagenes/escalada.jpeg" alt="Curso intermedio escalada en roca">
-        <h4>Curso Intermedio Escalada en Roca</h4>
-        <p>Tecnicas mas avanzadas para la escalada. Se requiere conocimiento previo.</p>
-        <p class="precio">$100.000</p>
-        <br><button class="agregar-carrito">Agregar al carrito</button></br>
-        <button id="botonDetalleCursoIntermedio">Ver Detalle</button>
-    </div>
+<main class="item3" id="catalogoCursos" >
+<!--    <div>-->
+<!--        <img src="../Imagenes/cursoIntermedio.jpg" alt="Curso de Iniciación Escalada en Roca">-->
+<!--        <h4>Curso Iniciación Escalada en Roca</h4>-->
+<!--        <p>Aprenderás las técnicas básicas para iniciarte en la escalada con seguridad.</p>-->
+<!--        <p class="precio">$65.000</p>-->
+<!--        <br><button class="agregar-carrito">Agregar al carrito</button></br>-->
+<!--        <button id="botonDetalleCursoIniciante" onclick="mostrarModal1()">Ver Detalle</button>-->
+<!--    </div>-->
 
-    <div>
-        <img src="../Imagenes/cursoAvanzado.jpg" alt="Curso intermedio escalada en roca">
-        <h4>Curso Avanzado Escalada en Roca</h4>
-        <p>Curso dedicado a personas que quieran enseñar. Con Certificado oficial</p>
-        <p class="precio">$200.000</p>
-        <br><button class="agregar-carrito">Agregar al carrito</button></br>
-        <button id="botonDetalleCursoAvanzado">Ver Detalle</button>
-    </div>
+<!--    <div>-->
+<!--        <img src="../Imagenes/escalada.jpeg" alt="Curso intermedio escalada en roca">-->
+<!--        <h4>Curso Intermedio Escalada en Roca</h4>-->
+<!--        <p>Tecnicas mas avanzadas para la escalada. Se requiere conocimiento previo.</p>-->
+<!--        <p class="precio">$100.000</p>-->
+<!--        <br><button class="agregar-carrito">Agregar al carrito</button></br>-->
+<!--        <button id="botonDetalleCursoIntermedio">Ver Detalle</button>-->
+<!--    </div>-->
 
-    <div>
-        <img src="../Imagenes/trekking.jpeg" alt="Curso intermedio escalada en roca">
-        <h4>Trekking</h4>
-        <p>Salida grupal. Nivel medio</p>
-        <p class="precio">$20.000</p>
-        <br><button class="agregar-carrito">Agregar al carrito</button></br>
-        <button id="botonDetalleTrekking">Ver Detalle</button>
-    </div>
+<!--    <div>-->
+<!--        <img src="../Imagenes/cursoAvanzado.jpg" alt="Curso intermedio escalada en roca">-->
+<!--        <h4>Curso Avanzado Escalada en Roca</h4>-->
+<!--        <p>Curso dedicado a personas que quieran enseñar. Con Certificado oficial</p>-->
+<!--        <p class="precio">$200.000</p>-->
+<!--        <br><button class="agregar-carrito">Agregar al carrito</button></br>-->
+<!--        <button id="botonDetalleCursoAvanzado">Ver Detalle</button>-->
+<!--    </div>-->
 
-    <div>
-        <img src="../Imagenes/mountain%20bike.jpeg" alt="Curso intermedio escalada en roca">
-        <h4>Mountain Bike Ruta</h4>
-        <p>Salida grupal. Maximo 5 personas</p>
-        <p class="precio">$50.000</p>
-        <br><button class="agregar-carrito">Agregar al carrito</button></br>
-        <button id="botonDetalleMountainBike">Ver Detalle</button>
-    </div>
+<!--    <div>-->
+<!--        <img src="../Imagenes/trekking.jpeg" alt="Curso intermedio escalada en roca">-->
+<!--        <h4>Trekking</h4>-->
+<!--        <p>Salida grupal. Nivel medio</p>-->
+<!--        <p class="precio">$20.000</p>-->
+<!--        <br><button class="agregar-carrito">Agregar al carrito</button></br>-->
+<!--        <button id="botonDetalleTrekking">Ver Detalle</button>-->
+<!--    </div>-->
+
+<!--    <div>-->
+<!--        <img src="../Imagenes/mountain%20bike.jpeg" alt="Curso intermedio escalada en roca">-->
+<!--        <h4>Mountain Bike Ruta</h4>-->
+<!--        <p>Salida grupal. Maximo 5 personas</p>-->
+<!--        <p class="precio">$50.000</p>-->
+<!--        <br><button class="agregar-carrito">Agregar al carrito</button></br>-->
+<!--        <button id="botonDetalleMountainBike">Ver Detalle</button>-->
+<!--    </div>-->
 
 </main>
 </body>
