@@ -54,10 +54,48 @@ fieldset{
     margin: 4%;
 }
 
-.tituloCurso1{
+main{
+    display: grid;
+    grid-template-columns: auto auto auto;
     text-align: center;
-    background-color: #f60000;
-    color: #cfc71e;
-    font-family: Arial, Helvetica, sans-serif;
 }
+
+main div {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #b16262;
+}
+
+div img{
+    width: 100%;
+}
+
+div button{
+    margin: 2% 0 0 1%;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: 32% 1fr 1fr 1fr; /* aside fijo + main que se expande */
+    grid-template-areas:
+                   "header header header header"
+                   " aside main main main";
+}
+
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: aside;
+    margin: 20px 0 0 0 ;
+    width: 90%;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+
 
