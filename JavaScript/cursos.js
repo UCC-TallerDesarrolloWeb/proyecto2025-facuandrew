@@ -1,6 +1,24 @@
 /**
  * @method cargarCursos()
- * producto.forEach recorre la base de datos y carga los cursos disponibles a la pagina web dinamicamente
+ * producto.forEach recorre la base de datos y carga los cursos disponibles a la pagina web dinamicamente con innerHTML
+ */
+
+/**
+ * @method agregarAlCarrito()
+ * @param {id} id del producto que interesa agregar al carrito
+ *
+ * Obtengo todo lo que esta en mi carrito y lo asigno a una variable para poder manipularlo.
+ * Si esta variable (listaCarrito) esta vacia entonces creo un array vacio.
+ * Sino listaCarrito no esta vacio (tiene productos ya seleccionados) cargo el producto al array
+ *
+ * Guardo el valor que me pasan al localStorage.
+ */
+
+/**
+ * @method cargarCarrito()
+ *
+ *
+ *
  */
 
 const cursosSalidas = [
@@ -63,19 +81,66 @@ let cargarCursos = () =>{
 
     // Todo el codigo html se generara por cada elemento que tenga en mi array cursos.
     //  Finalizada la iteracion va y se inserta en el main
+
     cursosSalidas.forEach((elemento, id) => {
         contenido += `<div>
         <img src="../Imagenes/${elemento.imagen}" alt="${elemento.nombre}">
             <h4>${elemento.nombre}</h4>
             <p>${elemento.descripcion}</p>
-            <p>${elemento.precio}</p>
+            <p>$${elemento.precio}</p>
             <br><button class="agregar-carrito">Agregar al carrito</button></br>
             <button id="botonDetalleCursoIniciante" onclick="mostrarModal1()">Ver Detalle</button>
+            <button type="button" onclick="agregarAlCarrito(${id})">Agregar al Carrito</button>
         </div>`
     });
 
     document.getElementById("catalogoCursos").innerHTML = contenido;
 };
+
+let agregarAlCarrito = (id) => {
+
+    let listaCarrito = localStorage.getItem("carrito");
+
+    if(listaCarrito == null){
+        listaCarrito = [];
+    } else {
+        listaCarrito = JSON.parse(listaCarrito);
+    }
+
+    listaCarrito.push(id);
+
+    console.log(listaCarrito);
+
+    localStorage.setItem("carrito", JSON.stringify(listaCarrito));
+}
+
+let cargarCarrito = () => {
+    let listaCarrito = localStorage.getItem("carrito");
+
+    let contenido = "";
+
+    if(listaCarrito == null){
+        contenido = "<div>CARRITO VACIO</div>";
+    } else{
+        listaCarrito = JSON.parse(listaCarrito);
+
+        //listaCarrito al asignarle el valor de localStorage es un string, entonces para recorrer listaCarrito con forEach debo convertirlo en un array. Eso lo hago con JSONparse
+        //nosotros estabamos guardando los numeros de los elementos. Por eso el nombre de la variable num
+        listaCarrito.forEach((num) => {
+            contenido += `<div>
+                    <h3>${cursosSalidas[num].nombre}</h3>
+                    <p>$${cursosSalidas[num].precio}</p>
+            </div>`;
+        });
+    }
+
+    //luego de la iteracion listaCarrito.forEach.. Inyecto los elementos iterados en html CarritoCursos
+    //para mostrar los elementos seleccionados
+    document.getElementById("mostrarCarrito").innerHTML = contenido;
+
+};
+
+
 
 let mostrarModal1 = () => {
     document.getElementById("modal1").style.display = "block";
