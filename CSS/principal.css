@@ -1,5 +1,4 @@
 
-    /* Reset básico */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -7,14 +6,14 @@
       line-height: 1.6;
     }
 
-    /* Barra de navegación */
+
     header {
       background: white;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky; /* opcional: para que quede fija arriba */
+      position: sticky; 
       top: 0;
       z-index: 10;
     }
@@ -38,8 +37,14 @@
     nav a:hover {
       color: orange;
     }
+    .footer{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .info{
+      align-items: center;
+    }
 
-    /* Hero section con imagen */
     .hero {
       position: relative;
       background: url('/Imagenes/montana.jpeg') 
@@ -57,4 +62,3 @@
       margin-bottom: 1rem;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
-
