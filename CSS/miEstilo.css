@@ -75,26 +75,48 @@ div img{
 div button{
     margin: 2% 0 0 1%;
 }
+
 .contenedor {
     display: grid;
     grid-template-columns: 32% 1fr 1fr 1fr; /* aside fijo + main que se expande */
     grid-template-areas:
                    "header header header header"
+                   "nav nav nav nav"
                    " aside main main main";
     background-color: #919067;
 }
 
+a {
+    text-decoration: none; /*no subrayado*/
+    color: black;
+    background-color: #dc4040;
+    padding: 3px;
+    margin: 20px 0 0 20px;
+    transition: background-color 0.8s linear 0.2s;
+    border-radius: 2px;
+}
+
+a:hover {
+    background-color: #4141d5;
+    padding: 7px;
+}
+
 .item1 {
+    text-align: center;
     grid-area: header;
 }
 
-.item2 {
+.item2{
+    grid-area: nav;
+}
+
+.item3 {
     grid-area: aside;
     margin: 20px 0 0 0 ;
     width: 90%;
 }
 
-.item3 {
+.item4 {
     grid-area: main;
 }
 
