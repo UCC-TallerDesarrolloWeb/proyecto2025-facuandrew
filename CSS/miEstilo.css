@@ -1,60 +1,100 @@
-#encabezadoIndex{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info {
+    align-items: center;
+}
+
+.hero {
+    position: relative;
+    background: url('/Imagenes/montana.jpeg') no-repeat center center/cover;
+    height: 90vh;
     display: flex;
     align-items: center;
-    background-color: #0b0808;
-}
-
-#menu{
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-}
-
-button:hover{
-        background-color: #6f6faa;
-}
-
-#nombreEscuela{
-    color: #c1b72b;
-    text-align: center;
-    margin-left: 18%;
-    font-size: 350%;
-}
-
-section{
+    justify-content: center;
+    color: white;
     text-align: center;
 }
 
-#encabezadoRutas{
-    text-align: center;
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.inputRutas{
-    margin-top: 1%;
-    margin-bottom: 1%;
+button:hover {
+    background-color: #6f6faa;
 }
 
-.imgGeneral{
+.contenedorRutas {
+    background-color: #919067;
+}
+
+.imgRutas {
     border: 10px solid black;
     width: 500px;
     height: 500px;
-    /*margin: 0px 0px 0px 30%;*/
 }
-.ruta{
+
+.ruta {
     margin: 5%;
     text-align: center;
 }
 
-.tituloLugar{
+.tituloLugar {
     text-align: center;
 }
 
-fieldset{
+fieldset {
     display: flex;
     margin: 4%;
 }
 
-main{
+main {
     display: grid;
     grid-template-columns: auto auto auto;
     text-align: center;
@@ -68,15 +108,15 @@ main div {
     background-color: #baa7a7;
 }
 
-div img{
+div img {
     width: 100%;
 }
 
-div button{
+div button {
     margin: 2% 0 0 1%;
 }
 
-.contenedor {
+.contenedorCursosSalidas {
     display: grid;
     grid-template-columns: 32% 1fr 1fr 1fr; /* aside fijo + main que se expande */
     grid-template-areas:
@@ -101,18 +141,15 @@ a:hover {
     padding: 7px;
 }
 
-.item1 {
-    text-align: center;
-    grid-area: header;
-}
 
-.item2{
+.item2 {
+    margin-top: 20px;
     grid-area: nav;
 }
 
 .item3 {
     grid-area: aside;
-    margin: 20px 0 0 0 ;
+    margin: 20px 0 0 0;
     width: 90%;
 }
 

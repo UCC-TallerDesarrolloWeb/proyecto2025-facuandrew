@@ -117,9 +117,9 @@ Tener en cuenta:
 - [X] El estilo de los elementos debe establecerse en un archivo CSS (prohibido poner el atributo style a los elementos o emplear estilos incrustados).
 - [X] El CSS debe contar mínimo con un tipo de cada forma (por Tag, por ID y por clase).
 - [X] Se debe emplear pseudoclase
-- [ ] No emplear !important
-- [ ] El diseño de la página debe ser consistente
-- [ ] En la primera etapa debe existir un único archivo CSS (se debe evitar código duplicado. Se debe aplicar re-utilización de código/estilos)
+- [X] No emplear !important
+- [] El diseño de la página debe ser consistente
+- [X] En la primera etapa debe existir un único archivo CSS (se debe evitar código duplicado. Se debe aplicar re-utilización de código/estilos)
 
 ### Sobre Accesibilidad:
 - [ ] Toda imagen debe tener su etiqueta alt
@@ -130,11 +130,11 @@ Tener en cuenta:
 ### Sobre la funcionalidad JavaScript
 Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
 - [ ] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert o dialog, y que blanquee el contenido del campo.
-- [ ] Una función que calcule/muestre algo en base a los valores ingresados por el usuario en los inputs.
-- [ ] El código Js debe estar en un archivo externo
-- [ ] Se debe emplear var, let o const según corresponda para mayor eficiencia
-- [ ] No deben existir funciones innecesarias que no se llamen en ninguna sección del código
-- [ ] Las funciones deben estar escritas cómo **función flecha**
+- [X] Una función que calcule/muestre algo en base a los valores ingresados por el usuario en los inputs.
+- [X] El código Js debe estar en un archivo externo
+- [] Se debe emplear var, let o const según corresponda para mayor eficiencia
+- [] No deben existir funciones innecesarias que no se llamen en ninguna sección del código
+- [] Las funciones deben estar escritas cómo **función flecha**
 - [ ] No debe haber errores JavaScript presentes (F12 > Consola)
 - [ ] El funcionamiento de la página debe ser consistente.
 

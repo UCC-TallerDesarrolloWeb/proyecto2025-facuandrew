@@ -10,14 +10,9 @@
     <script type="text/javascript" src="../JavaScript/cursos.js" ></script>
 </head>
 
-<body class="contenedor" onload="cargarCursos()">
-
-    <header class="item1">
-        <h1>Shopping:: Cursos y Salidas Guiadas</h1>
-    </header>
+<body class="contenedorCursosSalidas" onload="cargarCursos()">
 
     <nav class="item2">
-        <a href="cursosSalidas.html">Cursos y Salidas disponibles</a>
         <a href="CarritoCursosSalidas.html">Carrito Cursos/Salidas Seleccionados</a>
     </nav>
 
@@ -33,43 +28,36 @@
                 <legend>Precios</legend>
                 <p>
                     <label for="price-min">Minimo:</label>
-                    <input type="number" id="price-min" name="price-min" value="0" min="0" onchange="filtrarPrecioMin()"/>
+                    <input type="number" id="price-min" name="price-min" value="0" min="0" onchange="buscarCurso()"/>
                 </p>
                 <p>
                     <label for="price-max">Maximo:</label>
-                    <input type="number" id="price-max" name="price-max" min="0" onchange="filtrarPrecioMax()"/>
+                    <input type="number" id="price-max" name="price-max" min="0" onchange="buscarCurso()"/>
                 </p>
             </fieldset>
 
             <fieldset>
                 <legend>Tipo Curso</legend>
                 <p>
-                    <input type="checkbox" id="iniciante" name="cursoIniciante" onchange="filtroCursoIniciante()"/>
-                    <label for="iniciante">Curso Iniciante</label>
+                    <input type="checkbox" id="escalada" name="cursoIniciante" onchange="buscarCurso()"/>
+                    <label for="escalada">Escalada</label>
                 </p>
                 <p>
-                    <input type="checkbox" id="intermedio" name="cursoIntermedio" onchange="filtroCursoIntermedio()"/>
-                    <label for="intermedio">Curso Intermedio</label>
+                    <input type="checkbox" id="trekking" name="cursoIntermedio" onchange="buscarCurso()"/>
+                    <label for="trekking">Trekking</label>
                 </p>
                 <p>
-                    <input type="checkbox" id="avanzado" name="cursoAvanzado" onchange="filtroCursoAvanzado()"/>
-                    <label for="avanzado">Curso Avanzado</label>
+                    <input type="checkbox" id="bike" name="cursoAvanzado" onchange="buscarCurso()"/>
+                    <label for="bike">Mountain Bike</label>
                 </p>
             </fieldset>
 
-            <select id="order">
-                <option disabled value="">Seleccione un Orden</option>
-                <option value="menor">Precio - de menor a mayor</option>
-                <option value="mayor">Precio - de mayor a menor</option>
-                <option value="a-z">Nombre - de A a la Z</option>
-                <option value="z-a">Precio - de Z a la A</option>
-            </select>
         </form>
     </aside>
 
      <dialog id="modal1">
-        <h2 id="titulo_curso">Detalle Curso Iniciacion</h2>
-        <p id="descripcion">Objetivos del curso: Que los alumnos obtengan todos los conocimientos teóricos y prácticos para poder ejecutar escaladas en montañas de roca vertical, mediante la progresión en libr y aseguramiento con empotradores.</p>
+        <h2 id="titulo_curso"></h2>
+        <p id="detalleCurso"></p>
          <button type="button" onclick="cerrarModal1()">Cerrar</button>
      </dialog>
 
