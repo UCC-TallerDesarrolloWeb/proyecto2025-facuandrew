@@ -118,7 +118,7 @@ div button {
 
 .contenedorCursosSalidas {
     display: grid;
-    grid-template-columns: 32% 1fr 1fr 1fr; /* aside fijo + main que se expande */
+    grid-template-columns: 32% 1fr 1fr 1fr; /* aside fijo y main que se expande */
     grid-template-areas:
                    "header header header header"
                    "nav nav nav nav"
@@ -157,5 +157,96 @@ a:hover {
     grid-area: main;
 }
 
+/* Responsive design mobile para cursosSalidas */
+@media (max-width: 600px) {
+    .contenedor, .contenedorCursosSalidas {
+        grid-template-areas:
+            "nav"
+            "aside"
+            "main";
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
 
+    header {
+        text-align: center;
+        padding: 10px;
+    }
 
+    header img {
+        max-width: 150px; /* para que el logo no se rompa */
+    }
+
+    #catalogoCursos {
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Responsive design mobile para ruta */
+@media (max-width: 600px) {
+    .contenedorRutas {
+        padding: 10px;
+    }
+
+    #encabezadoRutas {
+        text-align: center;
+        padding: 10px;
+    }
+
+    label, select, .inputRutas {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .imgRutas {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        border: 5px solid black;
+    }
+
+    .ruta {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

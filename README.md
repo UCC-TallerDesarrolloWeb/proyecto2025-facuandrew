@@ -55,23 +55,23 @@ Tener en cuenta:
 
 ### Sobre el Wireframe Mockup
 - [X] Dibujado con algún programa como: Figma, AdobeXD, Canvas, Draw.io en Drive, Pencil Project, Mockups, NinjaMock, o similares.
-- [ ] Diseño de Mensajes de error para el usuario
-- [ ] Versión Desktop y Mobile
-- [ ] Guardado en formato PNG, JPG ó PDF
-- [ ] Dentro de una carpeta llamada "Wireframe" ó "Mockup"
+- [] Diseño de Mensajes de error para el usuario
+- [] Versión Desktop y Mobile
+- [] Guardado en formato PNG, JPG ó PDF
+- [] Dentro de una carpeta llamada "Wireframe" ó "Mockup"
 
 ### Sobre el Repositorio
 - [X] El proyecto debe estar subido al repositorio adecuado "Proyecto2025-ApellidoAlumno1-ApellidoAlumno2"
 - [] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 - [X] En el **readme.md** se debe emplear Markdown y aplicar negrita, titulo de orden 1, 2 y 3, link, items, tabla, index a cada sección
 - [] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
-- [ ] Publicar la Web empleando GitHubPages
+- [] Publicar la Web empleando GitHubPages
 - [] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc ni .DS_Store, en todo caso emplear **.gitignore**)
 
 ## Sobre el Proyecto General
-- [x] La página principal debe llamarse index
-- [ ] NO está permitido descargar un TEMPLATE (diseño 100% desde cero)
-- [ ] La estructura del proyecto debe ser adecuada
+- [X] La página principal debe llamarse index
+- [] NO está permitido descargar un TEMPLATE (diseño 100% desde cero)
+- [] La estructura del proyecto debe ser adecuada
       - Crear una carpeta para las imágenes
       - Carpeta para los sketch
       - Carpeta para los mockups/Wireframes
@@ -79,13 +79,13 @@ Tener en cuenta:
       - Carpeta de Componentes
       - Carpeta de Pages
       - Carpeta de Styles
-- [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
-- [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
-- [ ] Se debe emplear algún favicon
-- [ ] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
-- [ ] Debe haber navegación entre todas las páginas
-- [ ] No debe haber errores de ortografía en el contenido visual
-- [ ] "Lorem ipsum" es sólo válido para los prototipos, NO para la página
+- [] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
+- [] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
+- [] Se debe emplear algún favicon
+- [] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
+- [] Debe haber navegación entre todas las páginas
+- [] No debe haber errores de ortografía en el contenido visual
+- [] "Lorem ipsum" es sólo válido para los prototipos, NO para la página
 
 ### Sobre el HTML
 - [ ] Todas las etiquetas deben estar en minúscula
@@ -129,14 +129,14 @@ Tener en cuenta:
 
 ### Sobre la funcionalidad JavaScript
 Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
-- [ ] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert o dialog, y que blanquee el contenido del campo.
+- [] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert o dialog, y que blanquee el contenido del campo.
 - [X] Una función que calcule/muestre algo en base a los valores ingresados por el usuario en los inputs.
 - [X] El código Js debe estar en un archivo externo
 - [] Se debe emplear var, let o const según corresponda para mayor eficiencia
 - [] No deben existir funciones innecesarias que no se llamen en ninguna sección del código
 - [] Las funciones deben estar escritas cómo **función flecha**
-- [ ] No debe haber errores JavaScript presentes (F12 > Consola)
-- [ ] El funcionamiento de la página debe ser consistente.
+- [] No debe haber errores JavaScript presentes (F12 > Consola)
+- [] El funcionamiento de la página debe ser consistente.
 
 ### Sobre la documentación
 - [ ] TODAS las funciones javaScript deben estar comentadas adecuadamente. [JsDoc](https://jsdoc.app/about-getting-started.html)
