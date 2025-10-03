@@ -5,7 +5,7 @@
 
 /**
  * @method agregarAlCarrito()
- * @param {id} id del producto que interesa agregar al carrito
+ * @param {id} id del producto que interesa agregar al carrito. Id es la posicino que ocupa el producto en el array
  *
  * Obtengo todo lo que esta en mi carrito y lo asigno a una variable para poder manipularlo.
  * Si esta variable (listaCarrito) esta vacia entonces creo un array vacio.
@@ -16,13 +16,51 @@
 
 /**
  * @method cargarCarrito()
+ * "removeItem" elimina todo los elementos que se encuentran en el carrito
+ *
+ * "window.location.reload" recarga la pagina para que los productos no se sigan mostrando una vez eliminados del carrito
+ */
+
+/**
+ * @method vaciarCarrito()
  * ListaCarrito al asignarle el valor de localStorage es un string, entonces para recorrer listaCarrito con
  * forEach debo convertirlo en un array. Eso lo hago con JSONparse
  *
  * Luego de toda la iteracion  listaCarrito.forEach.. Inyecto los elementos iterados en html CarritoCursos
  * para mostrar los elementos seleccionados
  *
+ * Se le agrega un boton "vaciar carrito "en casa de querer borrar todos los elementos del carrito
  */
+
+/**
+ * @method eliminarProducto()
+ * @param {id} id del producto que quiero eliminar. Id es la posicion que ocupa el producto en el array
+ *
+ * Con esta funcion elimino puedo eliminar de a un producto
+ *
+ * ".splice(param1 , param2)" es un metodo de arreglos para eliminar o agregar elementos a un arreglo.
+ * "param1" indica el inicio desde de donde se removeran/agregara el elemento/elementos
+ * "param2" indica la cantidad de elementos que quiero remover del array partiendo del "param1", que es el indice del array
+ *
+ * Condicional sirve para verificar si el carrito tiene o no elementos. Sino tiene elemento no tiene sentido guardarlo.
+ * Si tiene elementos entonces lo guardo en localStorage y actualizo la pagina
+ */
+
+/**
+ * @method buscarCurso()
+ *
+ * Funcion que permite buscar a partir de un input ingresado por el usuario.
+ *
+ * Obtengo el valor ingresado por el usuario con document.getElementById(htmlID).
+ *
+ * nuevaLista retorna los cursos y salidas seleccionados por el usuario mediante algun input
+ *
+ * Con el condicional, verifico si la palabra ingresada es verdadera.
+ * Si la palabra es verdadera luego filtro por el nombre del curso correspondiente
+ *
+ *
+ */
+
 
 const cursosSalidas = [
     {
@@ -122,7 +160,7 @@ let agregarAlCarrito = (id) => {
     console.log(listaCarrito);
 
     localStorage.setItem("carrito", JSON.stringify(listaCarrito));
-}
+};
 
 let cargarCarrito = () => {
     let listaCarrito = localStorage.getItem("carrito");
@@ -134,56 +172,64 @@ let cargarCarrito = () => {
     } else{
         listaCarrito = JSON.parse(listaCarrito);
 
-        //listaCarrito al asignarle el valor de localStorage es un string, entonces para recorrer listaCarrito con forEach debo convertirlo en un array. Eso lo hago con JSONparse
-        //nosotros estabamos guardando los numeros de los elementos. Por eso el nombre de la variable num
         listaCarrito.forEach((num, id) => {
             contenido += `<div>
-                    <h3>${cursosSalidas[num].nombre}</h3>
-                    <p>$${cursosSalidas[num].precio}</p>
+                <h3>${cursosSalidas[num].nombre}</h3>
+                <p>$${cursosSalidas[num].precio}</p>
                 <button type = "button" onClick="eliminarProducto(${id})">Eliminar Producto</button>
-
-            
-                    </div>`;
+            </div>`;
         });
-           contenido += `<button type ="button" onClick="vaciarCarrito()">
-    Vaciar Carrito
-    </button>`
+        contenido += `<button type ="button" onClick="vaciarCarrito()">Vaciar Carrito</button>`
     }
 
-    //luego de la iteracion listaCarrito.forEach.. Inyecto los elementos iterados en html CarritoCursos
-    //para mostrar los elementos seleccionados
- 
     document.getElementById("mostrarCarrito").innerHTML = contenido;
-
 };
 
-let vaciarCarrito =() =>{
+let vaciarCarrito = () =>{
     localStorage.removeItem("carrito");
     window.location.reload();
+};
 
-}
-let eliminarProducto = (id)=>{
-    let carritoList = localStorage.getItem("carrito");
-    carritoList = JSON.parse(carritoList);
-    carritoList.splice(id,1);
-    if(carritoList.length > 0){
-    localStorage.setItem("carrito", JSON.stringify(carritoList));
-    }
-    else{
+let eliminarProducto = (id)=> {
+    let listaCarrito = localStorage.getItem("carrito");
+
+    listaCarrito = JSON.parse(listaCarrito);
+
+    listaCarrito.splice(id,1);
+
+    if(listaCarrito.length > 0){
+        localStorage.setItem("carrito", JSON.stringify(listaCarrito));
+    } else{
         localStorage.removeItem("carrito");
     }
+
     window.location.reload();
-
-}
-
-
+};
 
 let mostrarModal1 = (id) => {
     document.getElementById("titulo_curso").innerText = cursosSalidas[id].nombre;
     document.getElementById("descripcion").innerText = cursosSalidas[id].descripcion;
     document.getElementById("modal1").style.display = "block";
-}
+};
 
 let cerrarModal1 = () => {
     document.getElementById("modal1").style.display = "none";
-}
+};
+
+buscarCurso = () => {
+    let buscarPalabra = document.getElementById("search").value;
+    let min = document.getElementById("price-min").value;
+    let max = document.getElementById("price-max").value; //input tipo text, number, select
+    let iniciante = document.getElementById("iniciante").checked; //input tipo checkBok
+    let intermedio  = document.getElementById("intermedio").checked;
+    let avanzado  = document.getElementById("avanzado").checked;
+
+    let nuevaLista = cursosSalidas;
+
+    if(buscarPalabra) {
+        nuevaLista = nuevaLista.filter((prod) => prod.nombre == buscarPalabra)
+    }
+
+
+
+};

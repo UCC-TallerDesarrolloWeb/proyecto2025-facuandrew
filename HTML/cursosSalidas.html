@@ -26,32 +26,33 @@
             <fieldset>
                 <legend>Busqueda</legend>
                 <label for="search">Buscar:</label>
-                <input type="text" id="search" placeholder="Searching..."/>
+                <input type="text" id="search" placeholder="Searching..." onchange="buscarCurso()"/>
             </fieldset>
 
             <fieldset>
                 <legend>Precios</legend>
                 <p>
                     <label for="price-min">Minimo:</label>
-                    <input type="number" id="price-min" name="price-min" value="0" min="0"/>
+                    <input type="number" id="price-min" name="price-min" value="0" min="0" onchange="filtrarPrecioMin()"/>
                 </p>
                 <p>
                     <label for="price-max">Maximo:</label>
-                    <input type="number" id="price-max" name="price-max" min="0"/>
+                    <input type="number" id="price-max" name="price-max" min="0" onchange="filtrarPrecioMax()"/>
                 </p>
             </fieldset>
+
             <fieldset>
-                <legend>Tipo Producto</legend>
+                <legend>Tipo Curso</legend>
                 <p>
-                    <input type="checkbox" id="iniciante" name="cursoIniciante"/>
+                    <input type="checkbox" id="iniciante" name="cursoIniciante" onchange="filtroCursoIniciante()"/>
                     <label for="iniciante">Curso Iniciante</label>
                 </p>
                 <p>
-                    <input type="checkbox" id="intermedio" name="entrenamiento"/>
+                    <input type="checkbox" id="intermedio" name="cursoIntermedio" onchange="filtroCursoIntermedio()"/>
                     <label for="intermedio">Curso Intermedio</label>
                 </p>
                 <p>
-                    <input type="checkbox" id="avanzado" name="dobok"/>
+                    <input type="checkbox" id="avanzado" name="cursoAvanzado" onchange="filtroCursoAvanzado()"/>
                     <label for="avanzado">Curso Avanzado</label>
                 </p>
             </fieldset>
@@ -66,15 +67,13 @@
         </form>
     </aside>
 
-
-        <dialog id="modal1">
-            <h2 id="titulo_curso">Detalle Curso Iniciacion</h2>
-            <p id="descripcion">Objetivos del curso: Que los alumnos obtengan todos los conocimientos teóricos y prácticos para poder ejecutar escaladas en montañas de roca vertical, mediante la progresión en libr y aseguramiento con empotradores.</p>
-           <button type="button" onclick="cerrarModal1()">Cerrar</button>
-        </dialog>
+     <dialog id="modal1">
+        <h2 id="titulo_curso">Detalle Curso Iniciacion</h2>
+        <p id="descripcion">Objetivos del curso: Que los alumnos obtengan todos los conocimientos teóricos y prácticos para poder ejecutar escaladas en montañas de roca vertical, mediante la progresión en libr y aseguramiento con empotradores.</p>
+         <button type="button" onclick="cerrarModal1()">Cerrar</button>
+     </dialog>
 
     <main class="item4" id="catalogoCursos">
-       
 
     </main>
 
