@@ -108,21 +108,22 @@ let cargarCursos = () =>{
 };
 
 let agregarAlCarrito = (id) => {
-
     let listaCarrito = localStorage.getItem("carrito");
+    listaCarrito = listaCarrito ? JSON.parse(listaCarrito) : [];
 
-    if(listaCarrito == null){
-        listaCarrito = [];
+    if (listaCarrito.includes(Number(id))) {
+        alert("Este curso ya está en el carrito");
+        return;
     } else {
-        listaCarrito = JSON.parse(listaCarrito);
+        listaCarrito.push(Number(id));
+        localStorage.setItem("carrito", JSON.stringify(listaCarrito));
+        alert("Se ha cargado el curso correctamente");
     }
-
-    listaCarrito.push(id);
-
-    console.log(listaCarrito);
-
-    localStorage.setItem("carrito", JSON.stringify(listaCarrito));
 }
+
+    
+
+
 
 let cargarCarrito = () => {
     let listaCarrito = localStorage.getItem("carrito");
