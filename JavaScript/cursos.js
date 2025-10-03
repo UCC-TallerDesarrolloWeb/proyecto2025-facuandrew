@@ -84,14 +84,17 @@ let cargarCursos = () =>{
 
     cursosSalidas.forEach((elemento, id) => {
         contenido += `<div>
-        <img src="../Imagenes/${elemento.imagen}" alt="${elemento.nombre}">
+        <img src="../Imagenes/${elemento.imagen}" alt="${elemento.nombre}"/>
             <h4>${elemento.nombre}</h4>
             <p>${elemento.descripcion}</p>
-            <p>$${elemento.precio}</p>
-            <br><button class="agregar-carrito">Agregar al carrito</button></br>
-            <button id="botonDetalleCursoIniciante" onclick="mostrarModal1()">Ver Detalle</button>
-            <button type="button" onclick="agregarAlCarrito(${id})">Agregar al Carrito</button>
-        </div>`
+            <p>${elemento.precio}</p>
+            <button type="button" onclick="mostrarModal1(${id})">
+            Ver Detalle
+            </button>
+            <button type="button" onclick="agregarAlCarrito(${id})">
+            Agregar al Carrito
+            </button>
+        </div>`;
     });
 
     document.getElementById("catalogoCursos").innerHTML = contenido;
@@ -126,23 +129,51 @@ let cargarCarrito = () => {
 
         //listaCarrito al asignarle el valor de localStorage es un string, entonces para recorrer listaCarrito con forEach debo convertirlo en un array. Eso lo hago con JSONparse
         //nosotros estabamos guardando los numeros de los elementos. Por eso el nombre de la variable num
-        listaCarrito.forEach((num) => {
+        listaCarrito.forEach((num, id) => {
             contenido += `<div>
                     <h3>${cursosSalidas[num].nombre}</h3>
                     <p>$${cursosSalidas[num].precio}</p>
-            </div>`;
+                <button type = "button" onClick="eliminarProducto(${id})">Eliminar Producto</button>
+
+            
+                    </div>`;
         });
+           contenido += `<button type ="button" onClick="vaciarCarrito()">
+    Vaciar Carrito
+    </button>`
     }
 
     //luego de la iteracion listaCarrito.forEach.. Inyecto los elementos iterados en html CarritoCursos
     //para mostrar los elementos seleccionados
+ 
     document.getElementById("mostrarCarrito").innerHTML = contenido;
 
 };
 
+let vaciarCarrito =() =>{
+    localStorage.removeItem("carrito");
+    window.location.reload();
+
+}
+let eliminarProducto = (id)=>{
+    let carritoList = localStorage.getItem("carrito");
+    carritoList = JSON.parse(carritoList);
+    carritoList.splice(id,1);
+    if(carritoList.length > 0){
+    localStorage.setItem("carrito", JSON.stringify(carritoList));
+    }
+    else{
+        localStorage.removeItem("carrito");
+    }
+    window.location.reload();
+
+}
 
 
-let mostrarModal1 = () => {
+
+let mostrarModal1 = (id) => {
+    document.getElementById("titulo_curso").innerText = cursosSalidas[id].nombre;
+    document.getElementById("descripcion").innerText = cursosSalidas[id].descripcion;
     document.getElementById("modal1").style.display = "block";
 }
 
