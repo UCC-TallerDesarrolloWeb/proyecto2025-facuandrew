@@ -228,11 +228,55 @@ let buscarCurso = () => {
     let bike  = document.getElementById("bike").checked;
 
     let nuevaLista = cursosSalidas;
+    
+
+    /* 
+    Lo que hara esta pequena parte de codigo es atrapar un error en caso de que el usuario digite en el filtro,
+    se enviara un mensaje de alerta para notificar que la busqueda es solo por el nombre y descripcion.
+    */
+
+if (buscarPalabra.trim() !== "" && !isNaN(buscarPalabra)) {
+    alert("Usted está ingresando un número. Este filtro solo permite la búsqueda por nombre y descripción");
+    document.getElementById("search").value = "";
+    return;
+}
+
 
     if(buscarPalabra) {
         nuevaLista = nuevaLista.filter((curs) => curs.nombre.toLowerCase().includes(buscarPalabra.toLowerCase()) ||
                      curs.descripcion.toLowerCase().includes(buscarPalabra.toLowerCase())
         );
+    }
+    /* 
+    Nuevamente en este filtro lo que estamos intentando hacer es ver que la persona no pueda ingresar 
+    un valor que es menor que 0, dado que no tiene sentido...
+    */
+
+    //-- Manejo de errores con valores menores que 0
+    if (min.trim() !== "" && Number(min) < 0) {
+        alert("El número mínimo no puede ser menor que 0");
+        document.getElementById("price-min").value = "";
+    return;
+    }
+
+    if (max.trim() !== "" && Number(max) < 0) {
+        alert("El número máximo no puede ser menor que 0");
+        document.getElementById("price-max").value = "";
+    return;
+    }
+
+
+    // -- Manejo de errores con valores alfabeticos en una caja de texto que solo recibe valores numericos
+    if(min.trim() !=="" && isNaN(min)){
+        alert("Esta caja de texto solo permite un valor numerico");
+        document.getElementById("price-min").value = "";
+        return;
+    }
+    if(max.trim() !=="" && isNaN(max)){
+        alert("Esta caja texto solo permite un valor numerico");
+        document.getElementById("price-max").value=" ";
+        return;
+
     }
 
     if (min) {
@@ -253,5 +297,4 @@ let buscarCurso = () => {
         nuevaLista = nuevaLista.filter((curs) => category.includes(curs.categoria));
     }
     cargarCursos(nuevaLista);
-
 };
