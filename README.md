@@ -41,10 +41,10 @@ https://github.com/UCC-TallerDesarrolloWeb/proyecto2025-facuandrew
 
 ## REQUISITOS PRIMER PARCIAL
 ### Sobre el Sketch
-- [ ] Versión Desktop y Mobile
+- [X] Versión Desktop y Mobile
 - [X] Guardado en formato PNG, JPG ó PDF
 - [X] Dentro de una carpeta llamada "Sketch"
-- [] En el diseño tener en cuenta los mensajes de error para el usuario
+- [X] En el diseño tener en cuenta los mensajes de error para el usuario
 
 Tener en cuenta:
 * ¿Qué opciones debe ofrecer al usuario?
@@ -55,10 +55,10 @@ Tener en cuenta:
 
 ### Sobre el Wireframe Mockup
 - [X] Dibujado con algún programa como: Figma, AdobeXD, Canvas, Draw.io en Drive, Pencil Project, Mockups, NinjaMock, o similares.
-- [] Diseño de Mensajes de error para el usuario
-- [] Versión Desktop y Mobile
-- [] Guardado en formato PNG, JPG ó PDF
-- [] Dentro de una carpeta llamada "Wireframe" ó "Mockup"
+- [X] Diseño de Mensajes de error para el usuario
+- [X] Versión Desktop y Mobile
+- [X] Guardado en formato PNG, JPG ó PDF
+- [X] Dentro de una carpeta llamada "Wireframe" ó "Mockup"
 
 ### Sobre el Repositorio
 - [X] El proyecto debe estar subido al repositorio adecuado "Proyecto2025-ApellidoAlumno1-ApellidoAlumno2"
@@ -71,7 +71,11 @@ Tener en cuenta:
 ## Sobre el Proyecto General
 - [X] La página principal debe llamarse index
 - [X] NO está permitido descargar un TEMPLATE (diseño 100% desde cero)
+<<<<<<< HEAD
 - [] La estructura del proyecto debe ser adecuada
+=======
+- [X] La estructura del proyecto debe ser adecuada
+>>>>>>> fa41fb7f1d599d6dbb73262c17b0ed59c45ab0f6
       - Crear una carpeta para las imágenes
       - Carpeta para los sketch
       - Carpeta para los mockups/Wireframes
@@ -79,17 +83,17 @@ Tener en cuenta:
       - Carpeta de Componentes
       - Carpeta de Pages
       - Carpeta de Styles
-- [] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
-- [] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
-- [] Se debe emplear algún favicon
+- [X] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
+- [X] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
+- [X] Se debe emplear algún favicon
 - [] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
 - [] Debe haber navegación entre todas las páginas
-- [] No debe haber errores de ortografía en el contenido visual
-- [] "Lorem ipsum" es sólo válido para los prototipos, NO para la página
+- [X] No debe haber errores de ortografía en el contenido visual
+- [X] "Lorem ipsum" es sólo válido para los prototipos, NO para la página
 
 ### Sobre el HTML
-- [ ] Todas las etiquetas deben estar en minúscula
-- [ ] Poner comillas a todos los atributos
+- [] Todas las etiquetas deben estar en minúscula
+- [] Poner comillas a todos los atributos
 - [X] Title debe contener el título de la página
 - [X] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave
 - [X] Emplear al menos 3 etiquetas semánticas diferentes (header, nav, aside, main, section, article, footer)
@@ -139,7 +143,7 @@ Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
 - [] El funcionamiento de la página debe ser consistente.
 
 ### Sobre la documentación
-- [ ] TODAS las funciones javaScript deben estar comentadas adecuadamente. [JsDoc](https://jsdoc.app/about-getting-started.html)
+- [X] TODAS las funciones javaScript deben estar comentadas adecuadamente. [JsDoc](https://jsdoc.app/about-getting-started.html)
    ```/**
      * Descripción de que hace la función
      * @method Nombre de la función
