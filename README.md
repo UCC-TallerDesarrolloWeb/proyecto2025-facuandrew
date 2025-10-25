@@ -21,7 +21,11 @@ Escuela Escalada en Roca
 - [Sobre la documentación](#Sobre-la-documentación)
 - [Testing](#Testing)
 - [Sobre las correcciones](#Sobre-las-correcciones)
-- 
+- ### SEGUNDO PARCIAL ::
+- [Sobre React](#Sobre-React)
+- [Sobre las Correcciones](#sobre-las-correcciones)
+### REQUISITOS PARA EL FINAL 
+- [Requisitos del FINAL](#Requisitos-del-FINAL)
 ## Titulo Proyecto
 Pagina Web :: Escuela de Escalada en Roca
 
@@ -75,7 +79,6 @@ Tener en cuenta:
 - [] La estructura del proyecto debe ser adecuada
 =======
 - [X] La estructura del proyecto debe ser adecuada
->>>>>>> fa41fb7f1d599d6dbb73262c17b0ed59c45ab0f6
       - Crear una carpeta para las imágenes
       - Carpeta para los sketch
       - Carpeta para los mockups/Wireframes
@@ -209,7 +212,7 @@ const activities = [
 ];
 ````
 
-### Sobre las Correcciones
+### sobre las correcciones
 - [ ] Todas las correcciones y mejoras (sugerencias) solicitadas durante el primer parcial deben estar corregidas.
 - [ ] No debe haber errores presentes en el código (realizar *Code* > *Inspect Code* para verificar que no haya errores)
 - [ ] Se corregirá el proyecto con el último commit realizado en Github hasta las 23:59 del día anterior a la fecha de entrega
