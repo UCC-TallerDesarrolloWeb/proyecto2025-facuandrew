@@ -235,11 +235,11 @@ let buscarCurso = () => {
     se enviara un mensaje de alerta para notificar que la busqueda es solo por el nombre y descripcion.
     */
 
-if (buscarPalabra.trim() !== "" && !isNaN(buscarPalabra)) {
-    alert("Usted está ingresando un número. Este filtro solo permite la búsqueda por nombre y descripción");
-    document.getElementById("search").value = "";
-    return;
-}
+    if (buscarPalabra.trim() !== "" && !isNaN(buscarPalabra)) {
+        alert("Usted está ingresando un número. Este filtro solo permite la búsqueda por nombre y descripción");
+        document.getElementById("search").value = "";
+        return;
+    }
 
 
     if(buscarPalabra) {
@@ -247,6 +247,7 @@ if (buscarPalabra.trim() !== "" && !isNaN(buscarPalabra)) {
                      curs.descripcion.toLowerCase().includes(buscarPalabra.toLowerCase())
         );
     }
+
     /* 
     Nuevamente en este filtro lo que estamos intentando hacer es ver que la persona no pueda ingresar 
     un valor que es menor que 0, dado que no tiene sentido...
@@ -256,13 +257,13 @@ if (buscarPalabra.trim() !== "" && !isNaN(buscarPalabra)) {
     if (min.trim() !== "" && Number(min) < 0) {
         alert("El número mínimo no puede ser menor que 0");
         document.getElementById("price-min").value = "";
-    return;
+        return;
     }
 
     if (max.trim() !== "" && Number(max) < 0) {
         alert("El número máximo no puede ser menor que 0");
         document.getElementById("price-max").value = "";
-    return;
+            return;
     }
 
 
