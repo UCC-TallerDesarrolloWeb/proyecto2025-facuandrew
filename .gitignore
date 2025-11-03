@@ -1,5 +1,10 @@
 .idea
 .vsc
+
+.DS_Store
+*.DS_Store
+**/.DS_Store
+
 # Default ignored files
 /shelf/
 /workspace.xml
@@ -8,3 +13,6 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+
+
