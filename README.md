@@ -34,7 +34,7 @@ Pagina Web :: Escuela de Escalada en Roca
 - Carattoli Facudo 2418100
 
 ## Link de gh-pages
-https://github.com/UCC-TallerDesarrolloWeb/proyecto2025-facuandrew
+https://ucc-tallerdesarrolloweb.github.io/proyecto2025-facuandrew/HTML/index.html
 
 ## contenido de la pagina
 
