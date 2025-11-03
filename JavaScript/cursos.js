@@ -1,74 +1,3 @@
-/**
- * @method cargarCursos()
- * @param{curs = cursosSalidas} valor por defecto. Si el metodo no recibe ningun parametro listo todos los cursos
- * En cambio si la funcion recibe parametro entonces se realizara la iteracion a partir del parametro ingresado
- *
- * producto.forEach recorre la base de datos y carga los cursos disponibles a la pagina web dinamicamente con innerHTML
- */
-
-/**
- * @method agregarAlCarrito()
- * @param {id} id del producto que interesa agregar al carrito. Id es la posicino que ocupa el producto en el array
- *
- * Obtengo todo lo que esta en mi carrito y lo asigno a una variable para poder manipularlo.
- * Si esta variable (listaCarrito) esta vacia entonces creo un array vacio.
- * Sino listaCarrito no esta vacio (tiene productos ya seleccionados) cargo el producto al array
- *
- * Guardo el valor que me pasan al localStorage.
- */
-
-/**
- * @method cargarCarrito()
- * "removeItem" elimina todo los elementos que se encuentran en el carrito
- *
- * "window.location.reload" recarga la pagina para que los productos no se sigan mostrando una vez eliminados del carrito
- */
-
-/**
- * @method vaciarCarrito()
- * ListaCarrito al asignarle el valor de localStorage es un string, entonces para recorrer listaCarrito con
- * forEach debo convertirlo en un array. Eso lo hago con JSONparse
- *
- * Luego de toda la iteracion  listaCarrito.forEach.. Inyecto los elementos iterados en html CarritoCursos
- * para mostrar los elementos seleccionados
- *
- * Se le agrega un boton "vaciar carrito "en casa de querer borrar todos los elementos del carrito
- */
-
-/**
- * @method eliminarProducto()
- * @param {id} id del producto que quiero eliminar. Id es la posicion que ocupa el producto en el array
- *
- * Con esta funcion elimino puedo eliminar de a un producto
- *
- * ".splice(param1 , param2)" es un metodo de arreglos para eliminar o agregar elementos a un arreglo.
- * "param1" indica el inicio desde de donde se removeran/agregara el elemento/elementos
- * "param2" indica la cantidad de elementos que quiero remover del array partiendo del "param1", que es el indice del array
- *
- * Condicional sirve para verificar si el carrito tiene o no elementos. Sino tiene elemento no tiene sentido guardarlo.
- * Si tiene elementos entonces lo guardo en localStorage y actualizo la pagina
- */
-
-/**
- * @method buscarCurso()
- *
- * Funcion que permite buscar a partir de un input ingresado por el usuario.
- *
- * Obtengo el valor ingresado por el usuario con document.getElementById(htmlID).
- *
- * nuevaLista retorna los cursos y salidas seleccionados por el usuario mediante algun input
- *
- * Con los condicionales filtro por::
- * nombre curso y/o descripcion, usando non case sensitive.
- * precio minimo o maximo.
- *
- * Con un array obtengo lo que el usuario selecciona
- * Condicional ternario que sea verdadera se pusheara al array que definido vacio
- *
- * @return valores filtrados por el usuario o muestra todo los cursos disponibles
- */
-
-
 const cursosSalidas = [
     {
         nombre: "Curso Iniciación Escalada en Roca",
@@ -95,7 +24,7 @@ const cursosSalidas = [
     {
         nombre: "Curso Avanzado Escalada en Roca",
         descripcion: "Se debe haber pasado por el curso de iniciante e intermedio. Se requiere estar en aptas condiciones fisicas debido a la dificultad de la escalada y el terreno. Para mas informacion presione ver detalle",
-        detalleCurso:"Curso Avanzado Escalada en Roca nivel 3 requiere superar una prueba de ingreso. Es necesario tener experiencia para avanzar en situaciones y terrenos complejos.",
+        detalleCurso: "Curso Avanzado Escalada en Roca nivel 3 requiere superar una prueba de ingreso. Es necesario tener experiencia para avanzar en situaciones y terrenos complejos.",
         categoria: "escalada",
         marca: "",
         talle: [],
@@ -116,7 +45,7 @@ const cursosSalidas = [
     },
     {
         nombre: "Mountain Bike Road",
-        descripcion:"Salida grupal de maximo 5 personas. Ruta a traves de la montaña con partes de mucha adrenalida. Se proveen los elementos de seguridad y la bici.",
+        descripcion: "Salida grupal de maximo 5 personas. Ruta a traves de la montaña con partes de mucha adrenalida. Se proveen los elementos de seguridad y la bici.",
         detalleCurso: "Se eligen diferentes rutas en cada salida. El transporte hasta el lugar es independiente de cada persona. Nosotros nos encargamos de todo, bici, repuestos, elementos de seguridad, alimentos, bebida,",
         categoria: "mountain bike",
         marca: "",
@@ -127,8 +56,15 @@ const cursosSalidas = [
     },
 ];
 
+/**
+ * @method cargarCursos()
+ * @param{curs = cursosSalidas} valor por defecto. Si el metodo no recibe ningun parametro listo todos los cursos
+ * En cambio si la funcion recibe parametro entonces se realizara la iteracion a partir del parametro ingresado
+ *
+ * producto.forEach recorre la base de datos y carga los cursos disponibles a la pagina web dinamicamente con innerHTML
+ */
 
-let cargarCursos = (curs = cursosSalidas) =>{
+let cargarCursos = (curs = cursosSalidas) => {
     let contenido = "";
 
 
@@ -150,6 +86,17 @@ let cargarCursos = (curs = cursosSalidas) =>{
     document.getElementById("catalogoCursos").innerHTML = contenido;
 };
 
+/**
+ * @method agregarAlCarrito()
+ * @param {id} id del producto que interesa agregar al carrito. Id es la posicino que ocupa el producto en el array
+ *
+ * Obtengo todo lo que esta en mi carrito y lo asigno a una variable para poder manipularlo.
+ * Si esta variable (listaCarrito) esta vacia entonces creo un array vacio.
+ * Sino listaCarrito no esta vacio (tiene productos ya seleccionados) cargo el producto al array
+ *
+ * Guardo el valor que me pasan al localStorage.
+ */
+
 let agregarAlCarrito = (id) => {
     let listaCarrito = localStorage.getItem("carrito");
     listaCarrito = listaCarrito ? JSON.parse(listaCarrito) : [];
@@ -164,14 +111,21 @@ let agregarAlCarrito = (id) => {
     }
 };
 
+/**
+ * @method cargarCarrito()
+ * "removeItem" elimina todo los elementos que se encuentran en el carrito
+ *
+ * "window.location.reload" recarga la pagina para que los productos no se sigan mostrando una vez eliminados del carrito
+ */
+
 let cargarCarrito = () => {
     let listaCarrito = localStorage.getItem("carrito");
 
     let contenido = "";
 
-    if(listaCarrito == null){
+    if (listaCarrito == null) {
         contenido = "<div>CARRITO VACIO</div>";
-    } else{
+    } else {
         listaCarrito = JSON.parse(listaCarrito);
 
         listaCarrito.forEach((num, id) => {
@@ -187,21 +141,46 @@ let cargarCarrito = () => {
     document.getElementById("mostrarCarrito").innerHTML = contenido;
 };
 
-let vaciarCarrito = () =>{
+/**
+ * @method vaciarCarrito()
+ * ListaCarrito al asignarle el valor de localStorage es un string, entonces para recorrer listaCarrito con
+ * forEach debo convertirlo en un array. Eso lo hago con JSONparse
+ *
+ * Luego de toda la iteracion  listaCarrito.forEach.. Inyecto los elementos iterados en html CarritoCursos
+ * para mostrar los elementos seleccionados
+ *
+ * Se le agrega un boton "vaciar carrito "en casa de querer borrar todos los elementos del carrito
+ */
+
+let vaciarCarrito = () => {
     localStorage.removeItem("carrito");
     window.location.reload();
 };
 
-let eliminarProducto = (id)=> {
+/**
+ * @method eliminarProducto()
+ * @param {id} id del producto que quiero eliminar. Id es la posicion que ocupa el producto en el array
+ *
+ * Con esta funcion elimino puedo eliminar de a un producto
+ *
+ * ".splice(param1 , param2)" es un metodo de arreglos para eliminar o agregar elementos a un arreglo.
+ * "param1" indica el inicio desde de donde se removeran/agregara el elemento/elementos
+ * "param2" indica la cantidad de elementos que quiero remover del array partiendo del "param1", que es el indice del array
+ *
+ * Condicional sirve para verificar si el carrito tiene o no elementos. Sino tiene elemento no tiene sentido guardarlo.
+ * Si tiene elementos entonces lo guardo en localStorage y actualizo la pagina
+ */
+
+let eliminarProducto = (id) => {
     let listaCarrito = localStorage.getItem("carrito");
 
     listaCarrito = JSON.parse(listaCarrito);
 
-    listaCarrito.splice(id,1);
+    listaCarrito.splice(id, 1);
 
-    if(listaCarrito.length > 0){
+    if (listaCarrito.length > 0) {
         localStorage.setItem("carrito", JSON.stringify(listaCarrito));
-    } else{
+    } else {
         localStorage.removeItem("carrito");
     }
 
@@ -218,17 +197,36 @@ let cerrarModal1 = () => {
     document.getElementById("modal1").style.display = "none";
 };
 
+/**
+ * @method buscarCurso()
+ *
+ * Funcion que permite buscar a partir de un input ingresado por el usuario.
+ *
+ * Obtengo el valor ingresado por el usuario con document.getElementById(htmlID).
+ *
+ * nuevaLista retorna los cursos y salidas seleccionados por el usuario mediante algun input
+ *
+ * Con los condicionales filtro por::
+ * nombre curso y/o descripcion, usando non case sensitive.
+ * precio minimo o maximo.
+ *
+ * Con un array obtengo lo que el usuario selecciona
+ * Condicional ternario que sea verdadera se pusheara al array que definido vacio
+ *
+ * @return valores filtrados por el usuario o muestra todo los cursos disponibles
+ */
+
 let buscarCurso = () => {
 
     let buscarPalabra = document.getElementById("search").value;
     let min = document.getElementById("price-min").value;
     let max = document.getElementById("price-max").value; //input tipo text, number, select
     let escalada = document.getElementById("escalada").checked; //input tipo checkBok
-    let trekking  = document.getElementById("trekking").checked;
-    let bike  = document.getElementById("bike").checked;
+    let trekking = document.getElementById("trekking").checked;
+    let bike = document.getElementById("bike").checked;
 
     let nuevaLista = cursosSalidas;
-    
+
 
     /* 
     Lo que hara esta pequena parte de codigo es atrapar un error en caso de que el usuario digite en el filtro,
@@ -242,9 +240,9 @@ let buscarCurso = () => {
     }
 
 
-    if(buscarPalabra) {
+    if (buscarPalabra) {
         nuevaLista = nuevaLista.filter((curs) => curs.nombre.toLowerCase().includes(buscarPalabra.toLowerCase()) ||
-                     curs.descripcion.toLowerCase().includes(buscarPalabra.toLowerCase())
+            curs.descripcion.toLowerCase().includes(buscarPalabra.toLowerCase())
         );
     }
 
@@ -263,19 +261,19 @@ let buscarCurso = () => {
     if (max.trim() !== "" && Number(max) < 0) {
         alert("El número máximo no puede ser menor que 0");
         document.getElementById("price-max").value = "";
-            return;
+        return;
     }
 
 
     // -- Manejo de errores con valores alfabeticos en una caja de texto que solo recibe valores numericos
-    if(min.trim() !=="" && isNaN(min)){
+    if (min.trim() !== "" && isNaN(min)) {
         alert("Esta caja de texto solo permite un valor numerico");
         document.getElementById("price-min").value = "";
         return;
     }
-    if(max.trim() !=="" && isNaN(max)){
+    if (max.trim() !== "" && isNaN(max)) {
         alert("Esta caja texto solo permite un valor numerico");
-        document.getElementById("price-max").value=" ";
+        document.getElementById("price-max").value = " ";
         return;
 
     }
@@ -289,12 +287,12 @@ let buscarCurso = () => {
     }
 
     //no confundir categoria pertenenciente a las BD con category array para filtrar
-    let category = [] ;
+    let category = [];
     escalada ? category.push("escalada") : "";
     trekking ? category.push("trekking") : "";
     bike ? category.push("mountain bike") : "";
 
-    if(category.length > 0){
+    if (category.length > 0) {
         nuevaLista = nuevaLista.filter((curs) => category.includes(curs.categoria));
     }
     cargarCursos(nuevaLista);
