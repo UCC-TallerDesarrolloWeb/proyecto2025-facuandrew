@@ -2,33 +2,85 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import logo from '../public/Escuela_Escalada.png'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+        <header>
+          <div>
+            <a href="/index.html">
+              <img src={logo} alt="Logo" />
+            </a>``
+          </div>
+          <nav>
+            <ul>
+              <li><a href="cursosSalidas.html">Tienda</a></li>
+              <li><a href="foro.html">Foros</a></li>
+              <li><a href="rutas.html">Ruta</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <section class="hero">
+          <div>
+            <h2>Take me to the Mountains</h2>
+          </div>
+        </section>
+        <section class="comentarios">
+          <h2>Comentarios</h2>
+
+          //Lista de comentarios existentes 
+          <div class="lista-comentarios">
+            <div class="comentario">
+              <h3>María López</h3>
+              <p>Excelente experiencia en la salida de trekking, súper recomendada!</p>
+              <span class="fecha">Publicado el 3 de octubre de 2025</span>
+            </div>
+            <div class="comentario">
+              <h3>Juan Pérez</h3>
+              <p>Muy buena organización y guía. Volvería sin dudarlo.</p>
+              <span class="fecha">Publicado el 5 de octubre de 2025</span>
+            </div>
+          </div>
+
+          //Formulario para agregar un nuevo comentario 
+        </section>
+
+
+        <footer class="footer">
+          <div class="footer_contenedor">
+
+            <div class="footer_info">
+              <img src={logo} alt="Logo" className='footer_logo'/>
+                <p>
+                  Somos una Escuela de Escalada, un espacio dedicado<br />
+                    a la enseñanza y práctica de escalada.
+                </p>
+            </div>
+
+            <div class="footer_servicios">
+              <h2>Servicios</h2>
+              <ul>
+                <li>Trekking</li>
+                <li>Escalada</li>
+                <li>Snowboard</li>
+                <li>Mountain Bike</li>
+              </ul>
+            </div>
+
+            <div class="footer_contacto" id="contacto">
+              <h2>Contacto</h2>
+              <p><strong>Email:</strong> escalada@ecs.edu.ar</p>
+              <p><strong>Teléfono:</strong> +54 351 5789530</p>
+            </div>
+          </div>
+        </footer>
+      </>
   )
 }
 

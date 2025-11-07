@@ -1,42 +1,342 @@
-#root {
-  max-width: 1280px;
+
+.comentario .fecha {
+  display: block;
+  font-size: 0.9em;
+  color: gray;
+  margin-top: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    font-family: "Almendra", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+  font-family: "Almendra", serif;
+    font-weight: 400;
+    font-style: normal;;
+  line-height: 1.6;
+}
+
+/* ESTILOS GENERALES (aplican a todo el sitio) */
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.8s linear 0.2s;
+  border-radius: 2px;
+}
+
+a:hover {
+  background-color: #4141d5;
+  padding: 7px;
+}
+
+/* =========================================================
+   HEADER Y NAVEGACIÓN (común para todas las páginas)
+   ========================================================= */
+header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 2rem 1rem 1rem;
+}
+
+.footer_contenedor {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.footer_info {
+  text-align: center;
+  max-width: 300px;
+}
+
+.footer_logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.footer_servicios h2,
+.footer_contacto h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #222;
+}
+
+.footer_servicios ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer_servicios li {
+  margin-bottom: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.footer_servicios li:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.footer_contacto p {
+  margin: 0.3rem 0;
+}
+
+/* Versión responsive */
+@media (max-width: 768px) {
+  .footer_contenedor {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_servicios,
+  .footer_contacto {
+    width: 100%;
+  }
+}
+
+/* =================== SECCIÓN INDEX ======================== */
+/* HERO (portada principal del index) */
+
+.hero {
+  position: relative;
+  background: url('/public/montana.jpeg') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* =========================================================
+   =================== SECCIÓN CURSOS / RUTAS ===============
+   ========================================================= */
+
+button:hover {
+  background-color: #6f6faa;
+}
+
+.contenedorRutas {
+  background-color: #919067;
+}
+
+.imgRutas {
+  border: 10px solid black;
+  width: 500px;
+  height: 500px;
+}
+
+.ruta {
+  margin: 5%;
+  text-align: center;
+}
+
+.tituloLugar {
+  text-align: center;
+}
+
+fieldset {
+  display: flex;
+  margin: 4%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+}
+
+main div {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #baa7a7;
+}
+
+div img {
+  width: 100%;
+}
+
+div button {
+  margin: 2% 0 0 1%;
+}
+
+.contenedorCursosSalidas {
+  display: grid;
+  grid-template-columns: 32% 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "aside main main main";
+  background-color: #919067;
+}
+
+.item2 {
+  margin-top: 20px;
+  grid-area: nav;
+}
+
+.item3 {
+  grid-area: aside;
+  margin: 20px 0 0 0;
+  width: 90%;
+}
+
+.item4 {
+  grid-area: main;
+}
+
+/* =========================================================
+   =================== MEDIA QUERIES ========================
+   ========================================================= */
+
+/* Responsive para cursosSalidas e index */
+@media (max-width: 600px) {
+  .contenedor,
+  .contenedorCursosSalidas {
+    grid-template-areas:
+      "nav"
+      "aside"
+      "main";
+    grid-template-columns: 1fr;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    text-align: center;
+    padding: 10px;
+  }
+
+  header img {
+    max-width: 150px;
+  }
+
+  #catalogoCursos {
+    grid-template-columns: 1fr;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  fieldset {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Responsive para rutas */
+@media (max-width: 600px) {
+  .contenedorRutas {
+    padding: 10px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  #encabezadoRutas {
+    text-align: center;
+    padding: 10px;
+  }
 
-.read-the-docs {
-  color: #888;
+  label,
+  select,
+  .inputRutas {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .imgRutas {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border: 5px solid black;
+  }
+
+  .ruta {
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
