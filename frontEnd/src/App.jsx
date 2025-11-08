@@ -17,7 +17,7 @@ function App() {
           </div>
           <nav>
             <ul>
-              <li><Link to="/cursos">Tienda</Link></li>
+              <li><Lik to="/cursos">Tienda</Lik></li>
               <li><a href="foro.html">Foros</a></li>
               <li><a href="rutas.html">Ruta</a></li>
               <li><a href="#contacto">Contacto</a></li>
