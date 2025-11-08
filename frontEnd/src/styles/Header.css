@@ -1,0 +1,33 @@
+/* =========================================================
+   HEADER Y NAVEGACIÓN (común para todas las páginas)
+   ========================================================= */
+header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: orange;
+}
