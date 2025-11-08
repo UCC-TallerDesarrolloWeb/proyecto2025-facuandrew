@@ -1,0 +1,51 @@
+import "./Login.css" ;
+import {useState} from "react";
+
+const Login = () => {
+
+    // para declarar y manipular estados locales de un componente usando los Hooks
+    const [nombreUsuario, setNombreUsuario] = useState("");
+    const [contrasena, setContrasena] = useState("");
+
+    const handleLogin = async (e) => {
+
+        // funcion tipo submit hacenrecargar automatico paginas. Con preventDefault evitamos eso
+        e.preventDefault();
+
+        if(nombreUsuario == "admin" && contrasena == "admin"){
+
+            console.log("Login correcto");
+        } else{
+            console.log("Datos incorrecto");
+        }
+    }
+
+    return (
+        <div className = "login-contenedor" onSubmit={handleLogin}>
+            <form className = "login-form">
+                <h2>
+                    Iniciar Sesion
+                </h2>
+                <input
+                    type="text"
+                    placeholder="Usuario"
+                    // cambia el valor cuando usuario ingresa input
+                    onChange={(e) => setNombreUsuario(e.target.value)}
+                    value={nombreUsuario}
+                    required
+                />
+                <input
+                    type="password"
+                    placeholder="Contraseña"
+                    onChange={(e) => setContrasena(e.target.value)}
+                    value={contrasena}
+                    required
+                />
+                <button type="submit"> Ingresar </button>
+            </form>
+        </div>
+    );
+}
+
+//export para poder utilizar el componente cuando sea necesario
+export default Login;
