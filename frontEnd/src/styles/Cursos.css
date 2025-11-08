@@ -1,0 +1,64 @@
+/* Contenedor general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra de navegación arriba */
+.item2 {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+.item2 a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Estructura principal: aside (izquierda) y main (derecha) */
+.item3 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.item4 {
+  margin-left: 25%;
+  padding: 10px;
+  background-color: #fff;
+  min-height: 400px;
+}
+
+/* Formularios y campos */
+fieldset {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  width: 80px;
+}
+
+input[type="text"] {
+  width: 120px;
+  padding: 3px;
+  margin-top: 3px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Botón del modal */
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+}

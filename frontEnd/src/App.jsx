@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import logo from '../public/Escuela_Escalada.png'
+import logo from '../public/imagenes/Escuela_Escalada.png'
+import { Link } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,11 +13,11 @@ function App() {
           <div>
             <a href="/index.html">
               <img src={logo} alt="Logo" />
-            </a>``
+            </a>
           </div>
           <nav>
             <ul>
-              <li><a href="cursosSalidas.html">Tienda</a></li>
+              <li><Link to="/cursos">Tienda</Link></li>
               <li><a href="foro.html">Foros</a></li>
               <li><a href="rutas.html">Ruta</a></li>
               <li><a href="#contacto">Contacto</a></li>
@@ -26,36 +25,40 @@ function App() {
           </nav>
         </header>
 
-        <section class="hero">
+        <section className="hero">
           <div>
             <h2>Take me to the Mountains</h2>
           </div>
         </section>
-        <section class="comentarios">
+        <section className="comentarios">
           <h2>Comentarios</h2>
 
-          //Lista de comentarios existentes 
-          <div class="lista-comentarios">
-            <div class="comentario">
+         
+        
+        
+        {/* Lista de comentarios existentes */}
+        
+          <div className="lista-comentarios">
+            <div className="comentario">
               <h3>María López</h3>
               <p>Excelente experiencia en la salida de trekking, súper recomendada!</p>
-              <span class="fecha">Publicado el 3 de octubre de 2025</span>
+              <span className="fecha">Publicado el 3 de octubre de 2025</span>
             </div>
-            <div class="comentario">
+            <div className="comentario">
               <h3>Juan Pérez</h3>
               <p>Muy buena organización y guía. Volvería sin dudarlo.</p>
-              <span class="fecha">Publicado el 5 de octubre de 2025</span>
+              <span className="fecha">Publicado el 5 de octubre de 2025</span>
             </div>
           </div>
 
-          //Formulario para agregar un nuevo comentario 
+          {/*Formulario para agregar un nuevo comentario */}
         </section>
 
 
-        <footer class="footer">
-          <div class="footer_contenedor">
+        <footer className="footer">
+          <div className="footer_contenedor">
 
-            <div class="footer_info">
+            <div className="footer_info">
               <img src={logo} alt="Logo" className='footer_logo'/>
                 <p>
                   Somos una Escuela de Escalada, un espacio dedicado<br />
@@ -63,7 +66,7 @@ function App() {
                 </p>
             </div>
 
-            <div class="footer_servicios">
+            <div className="footer_servicios">
               <h2>Servicios</h2>
               <ul>
                 <li>Trekking</li>
@@ -73,7 +76,7 @@ function App() {
               </ul>
             </div>
 
-            <div class="footer_contacto" id="contacto">
+            <div className="footer_contacto" id="contacto">
               <h2>Contacto</h2>
               <p><strong>Email:</strong> escalada@ecs.edu.ar</p>
               <p><strong>Teléfono:</strong> +54 351 5789530</p>

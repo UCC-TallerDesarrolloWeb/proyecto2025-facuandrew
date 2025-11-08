@@ -68,9 +68,9 @@ Tener en cuenta:
 - [X] El proyecto debe estar subido al repositorio adecuado "Proyecto2025-ApellidoAlumno1-ApellidoAlumno2"
 - [X] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 - [X] En el **readme.md** se debe emplear Markdown y aplicar negrita, titulo de orden 1, 2 y 3, link, items, tabla, index a cada sección
-- [] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
-- [] Publicar la Web empleando GitHubPages
-- [] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc ni .DS_Store, en todo caso emplear **.gitignore**)
+- [X] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
+- [X] Publicar la Web empleando GitHubPages
+- [X] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc ni .DS_Store, en todo caso emplear **.gitignore**)
 
 ## Sobre el Proyecto General
 - [X] La página principal debe llamarse index
@@ -95,8 +95,8 @@ Tener en cuenta:
 - [X] "Lorem ipsum" es sólo válido para los prototipos, NO para la página
 
 ### Sobre el HTML
-- [] Todas las etiquetas deben estar en minúscula
-- [] Poner comillas a todos los atributos
+- [X] Todas las etiquetas deben estar en minúscula
+- [X] Poner comillas a todos los atributos
 - [X] Title debe contener el título de la página
 - [X] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave
 - [X] Emplear al menos 3 etiquetas semánticas diferentes (header, nav, aside, main, section, article, footer)
@@ -107,43 +107,43 @@ Tener en cuenta:
 - [X] Emplear el atributo [**placeholder**](U2_HTML_avanzado.html#/19) (mínimamente en 1 input)
 - [X] Emplear el atributo **size** para que el tamaño de los inputs sea prolijo
 - [X] Emplear el atributo **maxlength** para que el usurario no pueda ingresar valores "muy grandes"
-- [ ] No espaciar con excesivos ```<br>```. Utilizar márgenes, paddings, etc.
-- [ ] La anidación de etiquetas HTML debe ser correcta.
-- [ ] No utilizar etiquetas deprecadas.
-- [ ] Todas las etiquetas deben estar correctamente cerradas
-- [ ] Los ids de los elementos deben ser unívocos
+- [X] No espaciar con excesivos ```<br>```. Utilizar márgenes, paddings, etc.
+- [X] La anidación de etiquetas HTML debe ser correcta.
+- [X] No utilizar etiquetas deprecadas.
+- [X] Todas las etiquetas deben estar correctamente cerradas
+- [X] Los ids de los elementos deben ser unívocos
 
 ### Sobre las imágenes
 - [X] Debe contener por lo menos una etiqueta ```<img>``` en la página.
-- [] Todas las imágenes deben ser incluidas en el repositorio dentro de una carpeta llamada **imagenes** (salvo que sean demasiado pesadas. En ese caso, se puede emplear un servidor externo).
-- [] No se deben subir videos en el repositorio (excepto que sean MUY livianos).
-- [] Toda imagen debe tener su atributo alt
-- [] Las imágenes deben poseer un nombre representativo 
+- [X] Todas las imágenes deben ser incluidas en el repositorio dentro de una carpeta llamada **imagenes** (salvo que sean demasiado pesadas. En ese caso, se puede emplear un servidor externo).
+- [X] No se deben subir videos en el repositorio (excepto que sean MUY livianos).
+- [X] Toda imagen debe tener su atributo alt
+- [X] Las imágenes deben poseer un nombre representativo 
 
 ### Sobre el CSS
 - [X] El estilo de los elementos debe establecerse en un archivo CSS (prohibido poner el atributo style a los elementos o emplear estilos incrustados).
 - [X] El CSS debe contar mínimo con un tipo de cada forma (por Tag, por ID y por clase).
 - [X] Se debe emplear pseudoclase
 - [X] No emplear !important
-- [] El diseño de la página debe ser consistente
+- [X] El diseño de la página debe ser consistente
 - [X] En la primera etapa debe existir un único archivo CSS (se debe evitar código duplicado. Se debe aplicar re-utilización de código/estilos)
 
 ### Sobre Accesibilidad:
-- [ ] Toda imagen debe tener su etiqueta alt
+- [X] Toda imagen debe tener su etiqueta alt
 - [X] Todo ```<input>``` o ```<select>``` debe tener su ```<label>```
 - [X] Los labels deben contener el atributo **for** (el for debe contener el id del input al cual se referencia) 
-- [] Si hay una tabla en la página, debe contener ```<caption></caption>```
+- [X] Si hay una tabla en la página, debe contener ```<caption></caption>```
 
 ### Sobre la funcionalidad JavaScript
 Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
-- [] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert o dialog, y que blanquee el contenido del campo.
+- [X] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert o dialog, y que blanquee el contenido del campo.
 - [X] Una función que calcule/muestre algo en base a los valores ingresados por el usuario en los inputs.
 - [X] El código Js debe estar en un archivo externo
-- [] Se debe emplear var, let o const según corresponda para mayor eficiencia
-- [] No deben existir funciones innecesarias que no se llamen en ninguna sección del código
-- [] Las funciones deben estar escritas cómo **función flecha**
-- [] No debe haber errores JavaScript presentes (F12 > Consola)
-- [] El funcionamiento de la página debe ser consistente.
+- [X] Se debe emplear var, let o const según corresponda para mayor eficiencia
+- [X] No deben existir funciones innecesarias que no se llamen en ninguna sección del código
+- [X] Las funciones deben estar escritas cómo **función flecha**
+- [X] No debe haber errores JavaScript presentes (F12 > Consola)
+- [X] El funcionamiento de la página debe ser consistente.
 
 ### Sobre la documentación
 - [X] TODAS las funciones javaScript deben estar comentadas adecuadamente. [JsDoc](https://jsdoc.app/about-getting-started.html)
