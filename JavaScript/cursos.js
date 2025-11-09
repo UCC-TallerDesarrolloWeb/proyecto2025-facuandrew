@@ -88,7 +88,7 @@ let cargarCursos = (curs = cursosSalidas) => {
 
 /**
  * @method agregarAlCarrito()
- * @param {id} id del producto que interesa agregar al carrito. Id es la posicino que ocupa el producto en el array
+ * @param {id} id del producto que interesa agregar al carrito. Id es la posicion que ocupa el producto en el array
  *
  * Obtengo todo lo que esta en mi carrito y lo asigno a una variable para poder manipularlo.
  * Si esta variable (listaCarrito) esta vacia entonces creo un array vacio.

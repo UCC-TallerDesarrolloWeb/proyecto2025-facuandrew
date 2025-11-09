@@ -180,11 +180,11 @@ Por cada corrección o defecto en el HTML+CSS+Js se descontará un 5% del 85%.
 ## Requisitos del Segundo Parcial
 
 ### Sobre React
-- [ ] Se debe emplear **Vite** para instalar **React**
-- [ ] Se debe emplear **Hooks**, useState, useEffect, useContext, useNavigate
-- [ ] Se debe emplear **react-router-dom** para el enrutamiento a otras páginas
-- [ ] Se debe emplear **outlet** para que un componente principal renderice componentes de rutas hijas.
-- [ ] La estructura del proyecto (carpetas) debe ser el correcto: components, pages, styles
+- [X] Se debe emplear **Vite** para instalar **React**
+- [X] Se debe emplear **Hooks**, useState, useEffect, useContext, useNavigate
+- [X] Se debe emplear **react-router-dom** para el enrutamiento a otras páginas
+- [X] Se debe emplear **outlet** para que un componente principal renderice componentes de rutas hijas.
+- [X] La estructura del proyecto (carpetas) debe ser el correcto: components, pages, styles
 - [ ] Los **imports** deben ser usando con **alias**
 - [ ] Validaciones en tiempo real con onChange + mensajes de error accesibles.
 - [ ] Crear al menos un componente genérico (ej: Button, Card, Input) y reutilizarlo en varias páginas.
