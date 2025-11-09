@@ -4,3 +4,9 @@
     align-items: center;
     text-align: center;
 }
+
+.contenedor-img-cursos{
+    width: 20rem;
+    border-radius: 1rem;
+    margin: -10px;
+}
