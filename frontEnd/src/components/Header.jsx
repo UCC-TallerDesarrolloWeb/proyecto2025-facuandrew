@@ -19,6 +19,7 @@ const Header = () => {
         <header>
 
             <div className="contenedor-logo-Header">
+                {/*<button> <a href={/Home}></a> </button>*/}
                 <img src={logo} alt="Logo"/>
             </div>
 
@@ -26,6 +27,7 @@ const Header = () => {
 
             <nav>
                 <ul>
+                    <li> <Link to="/">Home</Link></li>
                     <li><Link to="/cursos">Cursos</Link></li>
                     <li><a href="#contacto">Contacto</a></li>
 
