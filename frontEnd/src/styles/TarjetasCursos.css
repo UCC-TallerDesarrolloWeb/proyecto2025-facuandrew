@@ -1,0 +1,6 @@
+.TarjetasCursos-contenedor{
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

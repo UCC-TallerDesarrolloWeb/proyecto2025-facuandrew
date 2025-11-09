@@ -17,7 +17,7 @@ const Login = () => {
         if(nombreUsuario == "admin" && contrasena == "admin"){
 
             console.log("Login correcto");
-            navegador("cursos")
+            navegador("/cursos")
         } else{
             console.log("Datos incorrecto");
         }

@@ -11,10 +11,10 @@ function App() {
   return (
       <Routes>
         {/* Ruta principal con Layout que contiene Home */}
-        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/cursos" element={<Cursos />} />
           <Route index element={<Home />} />
-          <Route path="cursos" element={<Cursos />} />
-          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
   )
