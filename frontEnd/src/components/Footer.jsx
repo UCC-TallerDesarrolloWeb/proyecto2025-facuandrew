@@ -1,6 +1,6 @@
-import "../styles/Footer.css"
+import "@styles/Footer.css"
 import "@styles/Footer.css";
-import logo from "../assets/imagenes/Escuela_Escalada.png"
+import logo from "@assets/imagenes/Escuela_Escalada.png"
 
 const Footer = () => {
     return (

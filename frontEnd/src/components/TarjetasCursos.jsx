@@ -1,4 +1,4 @@
-import "../styles/TarjetasCursos.css";
+import "@styles/TarjetasCursos.css";
 
 const TarjetasCursos = ({ cursos }) => {
   return (
@@ -6,7 +6,7 @@ const TarjetasCursos = ({ cursos }) => {
       {cursos.map((curso) => (
         <div className="tarjeta-curso" key={curso.id}>
           <h3>{curso.nombre}</h3>
-          <img src={curso.imagen} alt={curso.nombre} />
+          <img className="contenedor-img-cursos" src={curso.imagen} alt={curso.nombre} />
           <p>{curso.descripcion}</p>
           <p>${curso.precio}</p>
         </div>

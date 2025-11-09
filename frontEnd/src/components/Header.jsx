@@ -1,5 +1,5 @@
 import "@styles/Header.css"
-import logo from "../assets/imagenes/Escuela_Escalada.png"
+import logo from "@assets/imagenes/Escuela_Escalada.png"
 import {Link} from "react-router-dom"
 import {useNavigate} from "react-router-dom";
 
@@ -33,13 +33,16 @@ const Header = () => {
 
                     {/*operad ternario para corrobar si estaLogeado true muestro boton para cerrar sesion Y si estaLogeado false entonces muestro boton login */}
                     {estaLogeado ? (
-                        <button onClick={logout}> Cerrar Sesion</button>
-                        ): ( <a href="/login">Login </a>)
+                        <li>
+                        <button className="botonCerrarSesion" onClick={logout}> Cerrar Sesion</button>
+                        </li>
+                        ): (
+                            <li>
+                                <Link to="/login">Login </Link>
+                            </li>
+                        )
                     }
 
-                    {/*<li><a href="foro.html">Foros</a></li>*/}
-                    {/*<li><a href="rutas.html">Ruta</a></li>*/}
-                    {/*<li><a href="/login">Login</a></li>*/}
                 </ul>
             </nav>
         </header>

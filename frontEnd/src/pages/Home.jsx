@@ -1,5 +1,4 @@
-import montana from "../assets/imagenes/montana.jpeg";
-import "../styles/Home.css";
+import "@styles/Home.css";
 
 const Home = () => {
     return (

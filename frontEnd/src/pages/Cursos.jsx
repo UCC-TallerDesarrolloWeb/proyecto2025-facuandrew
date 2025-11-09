@@ -1,7 +1,8 @@
-import "../styles/Cursos.css";
+import '@styles/Cursos.css';
+import '@styles/TarjetasCursos.css'
 import { useState } from "react";
-import TarjetasCursos from "../components/TarjetasCursos.jsx";
-import { cursosData } from "../data/cursoData.js";
+import TarjetasCursos from '@components/TarjetasCursos.jsx';
+import { cursosData } from '@data/cursoData.js';
 
 function Cursos() {
   // 📦 Estados de los filtros
@@ -30,20 +31,20 @@ function Cursos() {
       return;
     }
 
-    // 1️⃣ Filtro por palabra clave
+    // Filtro por palabra clave
     if (buscarPalabra) {
       nuevaLista = nuevaLista.filter((curso) =>
         curso.nombre.toLowerCase().includes(buscarPalabra.toLowerCase())
       );
-      console.log("1. Resultados después de filtrar por PALABRA CLAVE:", nuevaLista);
+      console.log("1. Resultados después de filtrar por palabra clave:", nuevaLista);
     }
 
-    // 2️⃣ Filtro por precio
+    // Filtro por precio
     if (min && !isNaN(min)) nuevaLista = nuevaLista.filter((c) => c.precio >= min);
     if (max && !isNaN(max)) nuevaLista = nuevaLista.filter((c) => c.precio <= max);
-    console.log("2. Resultados después de filtrar por PRECIO:", nuevaLista);
+    console.log("2. Resultados después de filtrar por precio:", nuevaLista);
 
-    // 3️⃣ Filtro por categoría
+    // Filtro por categoría
     const categorias = [];
     if (escalada) categorias.push("escalada");
     if (trekking) categorias.push("trekking");
@@ -51,19 +52,18 @@ function Cursos() {
 
     if (categorias.length > 0) {
       nuevaLista = nuevaLista.filter((curso) => categorias.includes(curso.categoria));
-      console.log("3. Resultados después de filtrar por CATEGORÍA:", nuevaLista);
+      console.log("3. Resultados después de filtrar por categoria:", nuevaLista);
     }
 
-    // ✅ Actualizar estado final
+    // Actualizar estado final
     setListaFiltrada(nuevaLista);
-    console.log("--- FIN DE BÚSQUEDA ---");
+    console.log("Fin de busqueda");
   }
 
-  // 🎨 Render principal
+  // Render principal
   return (
     <div className="contenedor-filtros-cursos">
       <nav className="item2">
-        <a href="#">Carrito Cursos/Salidas Seleccionados</a>
       </nav>
 
       <aside className="item3">
