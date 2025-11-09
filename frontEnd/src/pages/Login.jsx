@@ -27,7 +27,7 @@ const Login = () => {
     return (
         <div className = "login-contenedor" onSubmit={handleLogin}>
             <form className = "login-form">
-                <h2>
+                <h2 className="login-titulo">
                     Iniciar Sesion
                 </h2>
                 <input
@@ -45,7 +45,7 @@ const Login = () => {
                     value={contrasena}
                     required
                 />
-                <button type="submit"> Ingresar </button>
+                <button className="boton-ingresar" type="submit"> Ingresar </button>
             </form>
         </div>
     );

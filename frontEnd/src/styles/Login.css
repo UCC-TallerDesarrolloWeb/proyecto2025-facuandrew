@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
+    margin: 20px;
+
 }
 
 .login-form {
@@ -19,4 +21,13 @@
     border-radius: 4px;
     display: block;
     margin: 1rem;
+}
+
+.boton-ingresar{
+    margin: 0 45px 5px;
+    text-align: center;
+}
+
+.login-titulo{
+    text-align: center;
 }
