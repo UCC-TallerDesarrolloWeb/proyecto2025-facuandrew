@@ -10,3 +10,10 @@
     border-radius: 1rem;
     margin: -10px;
 }
+
+.tarjeta-curso{
+    border : black solid 1px;
+    margin : 10px;
+    padding : 10px;
+    background-color: #b6b591;
+}

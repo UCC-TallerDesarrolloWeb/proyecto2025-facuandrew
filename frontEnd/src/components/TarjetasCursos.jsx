@@ -90,6 +90,7 @@ const tarjetasCursos = () => {
                     <h3>{curso.nombre}</h3>
                     <img className="contenedor-img-cursos" src={curso.imagen} alt={curso.nombre}/>
                     <p>{curso.descripcion}</p>
+                    <p>${curso.precio}</p>
                     <ul>
                         {/*ind = indice identificador,  */}
                         {curso.horario.map((horario, ind) =>
