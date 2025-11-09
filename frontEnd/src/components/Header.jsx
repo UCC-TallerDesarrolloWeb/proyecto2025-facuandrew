@@ -1,4 +1,4 @@
-import "../styles/Header.css"
+import "@styles/Header.css"
 import logo from "../assets/imagenes/Escuela_Escalada.png"
 import {Link} from "react-router-dom"
 import {useNavigate} from "react-router-dom";
