@@ -17,6 +17,7 @@ const Login = () => {
         if(nombreUsuario == "admin" && contrasena == "admin"){
 
             console.log("Login correcto");
+            localStorage.setItem("usuarioLogeado", "true");
             navegador("/cursos")
         } else{
             console.log("Datos incorrecto");

@@ -74,6 +74,9 @@ const tarjetasCursos = () => {
         alert(`Inscripto en ${nombreCurso}`);
     }
 
+    // obtengo el valor del localStorage para comprobar si el usuario inicio o no sesion
+    const estaLogeado = localStorage.getItem("usuarioLogeado") === "true";
+
     return (
         <div className="TarjetasCursos-contenedor">
 
@@ -90,8 +93,11 @@ const tarjetasCursos = () => {
                         )}
                     </ul>
 
-                    <button onClick= { () => handleInscription(curso.nombre) }> Incribirse </button>
-
+                    {/*corroboro que el usuario inicio sesion. Es decir si estaLogeado es true entonces el usuario podra usar el button */}
+                    {
+                        estaLogeado &&
+                        (<button onClick= { () => handleInscription(curso.nombre) }> Incribirse </button>)
+                    }
                 </div>
             ))}
         </div>
