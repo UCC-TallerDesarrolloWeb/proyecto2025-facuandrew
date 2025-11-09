@@ -1,20 +1,23 @@
 import "./Login.css" ;
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 const Login = () => {
 
     // para declarar y manipular estados locales de un componente usando los Hooks
     const [nombreUsuario, setNombreUsuario] = useState("");
     const [contrasena, setContrasena] = useState("");
+    const navegador = useNavigate();
 
     const handleLogin = async (e) => {
 
-        // funcion tipo submit hacenrecargar automatico paginas. Con preventDefault evitamos eso
+
         e.preventDefault();
 
         if(nombreUsuario == "admin" && contrasena == "admin"){
 
             console.log("Login correcto");
+            navegador("cursos")
         } else{
             console.log("Datos incorrecto");
         }
@@ -47,5 +50,4 @@ const Login = () => {
     );
 }
 
-//export para poder utilizar el componente cuando sea necesario
 export default Login;
