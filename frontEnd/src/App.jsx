@@ -1,23 +1,22 @@
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter,Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home'
 import Cursos from './pages/Cursos'
 import Login from './pages/Login.jsx'
 
 function App() {
-
   return (
       <Routes>
-        {/* path ="/" ruta raiz principal con Layout que contiene Home */}
-          <Route path="/" element={<Layout />}>
-        {/*index indica el componente que se mostrara por default cuando path ="/"*/}
+        {/* Rutas que usan el layout */}
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/cursos" element={<Cursos />} />
-
+          <Route path="cursos" element={<Cursos />} />
         </Route>
+
+        {/* Ruta que NO usa layout */}
+        <Route path="/login" element={<Login />} />
       </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,6 +1,7 @@
 import "@styles/Login.css" ;
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
+import Button from '../components/Button';
 
 const Login = () => {
 
@@ -45,7 +46,7 @@ const Login = () => {
                     value={contrasena}
                     required
                 />
-                <button className="boton-ingresar" type="submit"> Ingresar </button>
+                <Button text="Ingresar" type="submit" />    
             </form>
         </div>
     );
