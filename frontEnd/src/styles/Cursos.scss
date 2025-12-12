@@ -1,0 +1,36 @@
+@use 'variables';
+@use 'anidaciones';
+
+body{
+  background-color: variables.$color-principal;
+}
+
+@mixin caja_filtros_personalizados ($fondo: #bdb8b8, $color: variables.$color-letra){
+  background-color: $fondo;
+  border: 4px solid black;
+  box-shadow: 0 0 2px black;
+  margin: 20px 0 0 0;
+  display: grid;
+  grid-template-columns: 32% 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "aside main main main";
+
+}
+
+.contenedor-filtros-cursos{
+  @include caja_filtros_personalizados();
+}
+
+.item2{
+  margin-top: 20px;
+  grid-area: nav;
+}
+.item3{
+  grid-area: aside;
+
+}
+.item4{
+  grid-area: main;
+}
