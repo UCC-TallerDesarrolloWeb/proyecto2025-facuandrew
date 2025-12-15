@@ -55,6 +55,35 @@
   }
 }
 
+.barraNavegacionHeader .listaNavHeader {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.barraNavegacionHeader a {
+  text-decoration: none;
+  color: #302929;
+  font-weight: bold;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+.barraNavegacionHeader a:hover {
+  color: orange;
+  transition-duration: 1s;
+}
+.barraNavegacionHeader .botonCerrarSesion {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+.barraNavegacionHeader .botonCerrarSesion:hover {
+  color: orange;
+  transition-duration: 1s;
+}
+
 h2 {
   font-size: 1.7rem;
   font-style: oblique;

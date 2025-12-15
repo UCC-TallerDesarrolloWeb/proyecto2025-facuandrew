@@ -68,3 +68,40 @@
   }
 
 }
+
+.barraNavegacionHeader{
+  .listaNavHeader{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  a{
+    text-decoration: none;
+    color: variables.$color-letra;
+    font-weight: bold;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  a:hover {
+    color: orange;
+    transition-duration:1s ;
+  }
+
+  .botonCerrarSesion {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: variables.$font-letra;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+
+  }
+
+  .botonCerrarSesion:hover{
+    color: orange;
+    transition-duration:1s ;
+  }
+
+}

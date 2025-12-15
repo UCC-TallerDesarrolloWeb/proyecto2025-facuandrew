@@ -1,0 +1,18 @@
+@use 'variables';
+@use 'anidaciones';
+
+header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+h1{
+  font-size: 2rem;
+  position: relative;
+}

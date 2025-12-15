@@ -25,24 +25,17 @@ const Header = () => {
 
             <h1>Escuela Escalada en Roca</h1>
 
-            <nav>
-                <ul>
+            <nav className="barraNavegacionHeader">
+                <ul className="listaNavHeader">
                     <li> <Link to="/">Home</Link></li>
                     <li><Link to="/cursos">Cursos</Link></li>
                     <li><a href="#contacto">Contacto</a></li>
 
                     {/*operad ternario para corrobar si estaLogeado true muestro boton para cerrar sesion Y si estaLogeado false entonces muestro boton login */}
                     {estaLogeado ? (
-                        <li>
-                        <button className="botonCerrarSesion" onClick={logout}> Cerrar Sesion</button>
-                        </li>
-                        ): (
-                            <li>
-                                <Link to="/login">Login </Link>
-                            </li>
-                        )
+                        <li><button className="botonCerrarSesion" onClick={logout}> Cerrar Sesion</button></li>
+                        ):(<li> <Link to="/login">Login </Link></li>)
                     }
-
                 </ul>
             </nav>
         </header>
