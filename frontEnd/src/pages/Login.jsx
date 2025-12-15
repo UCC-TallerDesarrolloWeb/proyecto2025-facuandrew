@@ -1,7 +1,7 @@
 import "@styles/Login.css" ;
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import Button from '../components/Button';
+import Button from '@components/Button';
 
 const Login = () => {
 
@@ -31,9 +31,11 @@ const Login = () => {
                 <h2 className="login-titulo">
                     Iniciar Sesion
                 </h2>
+                <div>
                 <input
                     type="text"
                     placeholder="Usuario"
+                    className="contenedorUsuario"
                     // cambia el valor cuando usuario ingresa input
                     onChange={(e) => setNombreUsuario(e.target.value)}
                     value={nombreUsuario}
@@ -42,10 +44,12 @@ const Login = () => {
                 <input
                     type="password"
                     placeholder="Contraseña"
+                    className="contenedorPassword"
                     onChange={(e) => setContrasena(e.target.value)}
                     value={contrasena}
                     required
                 />
+                </div>
                 <Button text="Ingresar" type="submit" />    
             </form>
         </div>
