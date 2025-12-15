@@ -3,16 +3,16 @@ import "@styles/Home.css";
 const Home = () => {
     return (
         <>
-            <section className="hero">
+            <section className="heroHome">
                 <div>
                     <h2>Take me to the Mountains</h2>
                 </div>
             </section>
 
-            <section className="comentarios">
+            <section className="tituloComentarios">
                 <h2>Comentarios</h2>
 
-                <div className="lista-comentarios">
+                <div className="listaComentarios">
                     <div className="comentario">
                         <h3>María López</h3>
                         <p>

@@ -84,6 +84,22 @@
   transition-duration: 1s;
 }
 
+.heroHome {
+  position: relative;
+  background: url("../assets/imagenes/montana.jpeg") no-repeat center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.heroHome h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
 h2 {
   font-size: 1.7rem;
   font-style: oblique;
