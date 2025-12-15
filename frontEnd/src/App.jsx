@@ -1,8 +1,8 @@
 import { BrowserRouter,Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout.jsx'
-import Home from './pages/Home'
-import Cursos from './pages/Cursos'
-import Login from './pages/Login.jsx'
+import Layout from '@components/Layout.jsx'
+import Home from '@pages/Home'
+import Cursos from '@pages/Cursos'
+import Login from '@pages/Login.jsx'
 
 function App() {
   return (
