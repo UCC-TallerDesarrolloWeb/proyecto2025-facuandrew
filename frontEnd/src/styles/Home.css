@@ -71,18 +71,6 @@
   color: orange;
   transition-duration: 1s;
 }
-.barraNavegacionHeader .botonCerrarSesion {
-  background: none;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
-}
-.barraNavegacionHeader .botonCerrarSesion:hover {
-  color: orange;
-  transition-duration: 1s;
-}
 
 .heroHome {
   position: relative;

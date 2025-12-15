@@ -45,7 +45,7 @@ const cursosSalidas = [
     },
     {
         nombre: "Mountain Bike Road",
-        descripcion: "Salida grupal de maximo 5 personas. Ruta a traves de la montaña con partes de mucha adrenalida. Se proveen los elementos de seguridad y la bici.",
+        descripcion: "Salida grupal de maximo 5 personas. Ruta a traves de la montaña con partes de mucha adrenalina. Se proveen los elementos de seguridad y la bici.",
         detalleCurso: "Se eligen diferentes rutas en cada salida. El transporte hasta el lugar es independiente de cada persona. Nosotros nos encargamos de todo, bici, repuestos, elementos de seguridad, alimentos, bebida,",
         categoria: "mountain bike",
         marca: "",
@@ -61,7 +61,7 @@ const cursosSalidas = [
  * @param{curs = cursosSalidas} valor por defecto. Si el metodo no recibe ningun parametro listo todos los cursos
  * En cambio si la funcion recibe parametro entonces se realizara la iteracion a partir del parametro ingresado
  *
- * producto.forEach recorre la base de datos y carga los cursos disponibles a la pagina web dinamicamente con innerHTML
+ * producto.forEach recorre la base de datos y carga los cursos disponibles a la página web dinamicamente con innerHTML
  */
 
 let cargarCursos = (curs = cursosSalidas) => {
@@ -124,7 +124,7 @@ let cargarCarrito = () => {
     let contenido = "";
 
     if (listaCarrito == null) {
-        contenido = "<div>CARRITO VACIO</div>";
+        contenido = "<div>CARRITO VACÍO</div>";
     } else {
         listaCarrito = JSON.parse(listaCarrito);
 
