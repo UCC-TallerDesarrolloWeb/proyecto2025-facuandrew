@@ -1,5 +1,4 @@
 import "@styles/Footer.css"
-import "@styles/Footer.css";
 import logo from "@assets/imagenes/Escuela_Escalada.png"
 
 const Footer = () => {
@@ -17,7 +16,7 @@ const Footer = () => {
 
                 <div className="footer_servicios">
                     <h2>Servicios</h2>
-                    <ul>
+                    <ul className="lista_servicios">
                         <li>Trekking</li>
                         <li>Escalada</li>
                         <li>Snowboard</li>

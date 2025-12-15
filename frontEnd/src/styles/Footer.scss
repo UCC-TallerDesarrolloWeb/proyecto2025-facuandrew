@@ -1,0 +1,17 @@
+@use 'variables';
+@use 'anidaciones';
+
+h2{
+  font-size: 1.7rem;
+  font-style: oblique;
+}
+
+.lista_servicios{
+  list-style: none;
+  padding: 0 100px 0 20px ;
+}
+
+li{
+  margin-bottom: 0.5rem;
+}
+

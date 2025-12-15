@@ -37,9 +37,9 @@ a:hover {
   padding: 7px;
 }
 
-/* =========================================================
-   HEADER Y NAVEGACIÓN (común para todas las páginas)
-   ========================================================= */
+
+/*HEADER Y NAVEGACIÓN (común para todas las páginas)*/
+
 header {
   background: white;
   padding: 1rem 2rem;
@@ -71,9 +71,9 @@ nav a:hover {
   color: orange;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+
+/*FOOTER*/
+
 .footer {
   background-color: #f8f8f8;
   color: #333;
@@ -142,7 +142,7 @@ nav a:hover {
   }
 }
 
-/* =================== SECCIÓN INDEX ======================== */
+ /*SECCIÓN INDEX */
 /* HERO (portada principal del index) */
 
 .hero {
@@ -241,10 +241,7 @@ div button {
   grid-area: main;
 }
 
-/* =========================================================
-   =================== MEDIA QUERIES ========================
-   ========================================================= */
-
+/*MEDIA QUERIES*/
 /* Responsive para cursosSalidas e index */
 @media (max-width: 600px) {
   .contenedor,
