@@ -13,18 +13,24 @@
 
 <body class="contenedorRutas">
     <header id="encabezadoRutas">
-        <h1>Rutas de Escalada y Trekking</h1>
+        <h1 class="tituloPagRutas">Rutas de Escalada y Trekking</h1>
+        <a href="index.html" class="inicioRutas">Inicio</a>
+        <a href="cursosSalidas.html" class="cursosRutas">Cursos/Salidas</a>
+        <a href="CarritoCursosSalidas.html" class="carritoRutas">Carrito</a>
     </header>
-    <label for="dificultadRutas">Dificultad de la Ruta:</label>
-    <select name="dificultadRutas" id="dificultadRutas" >
-        <option value="facil">Facil</option>
-        <option value="medio">Medio</option>
-        <option value="dificil">Dificil</option>
-    </select>
-    <br>
-        <label for="buscaProvincia">Busca por Provincia:</label>
-        <input id="buscaProvincia" type="search" name="buscaProvincia" placeholder="Provincia..." size="28" maxlength="20" class="inputRutas">
-    </br>
+
+    <nav class="navRutas">
+        <label for="dificultadRutas">Dificultad de la Ruta:</label>
+        <select name="dificultadRutas" id="dificultadRutas" >
+            <option value="facil">Fàcil</option>
+            <option value="medio">Medio</option>
+            <option value="dificil">Difìcil</option>
+        </select>
+        <br>
+            <label for="buscaProvincia">Busca por Provincia:</label>
+            <input id="buscaProvincia" type="search" name="buscaProvincia" placeholder="Provincia..." size="28" maxlength="20" class="inputRutas">
+        </br>
+    </nav>
 
     <main>
         <article class="ruta">
