@@ -1,19 +1,21 @@
-.TarjetasCursos-contenedor{
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.TarjetasCursos-contenedor {
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.contenedor-img-cursos{
-    width: 20rem;
-    border-radius: 1rem;
-    margin: -10px;
+.contenedor-img-cursos {
+  width: 20rem;
+  border-radius: 1rem;
+  margin: -10px;
 }
 
-.tarjeta-curso{
-    border : black solid 1px;
-    margin : 10px;
-    padding : 10px;
-    background-color: #b6b591;
+.tarjeta-curso {
+  border: black solid 1px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #919067;
 }
+
+/*# sourceMappingURL=TarjetasCursos.css.map */
