@@ -26,8 +26,8 @@ const Login = () => {
     }
 
     return (
-        <div className = "login-contenedor" onSubmit={handleLogin}>
-            <form className = "login-form">
+        <form className = "login-contenedor" onSubmit={handleLogin}>
+            <div className = "login-form">
                 <h2 className="login-titulo">
                     Iniciar Sesion
                 </h2>
@@ -51,8 +51,8 @@ const Login = () => {
                 />
                 </div>
                 <Button text="Ingresar" type="submit" />    
-            </form>
-        </div>
+            </div>
+        </form>
     );
 }
 

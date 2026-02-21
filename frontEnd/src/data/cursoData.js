@@ -1,8 +1,8 @@
-import mountainBikeImg from "../assets/imagenes/mountainBike.jpeg";
-import cursoIntermedioImg from "../assets/imagenes/cursoIntermedio.jpg";
-import escaladaImg from "../assets/imagenes/escalada.jpeg";
-import cursoAvanzadaImg from "../assets/imagenes/cursoAvanzado.jpg";
-import trekkingImg from "../assets/imagenes/trekking.jpeg";
+import mountainBikeImg from "@assets/imagenes/mountainBike.jpeg";
+import cursoIntermedioImg from "@assets/imagenes/cursoIntermedio.jpg";
+import escaladaImg from "@assets/imagenes/escalada.jpeg";
+import cursoAvanzadaImg from "@assets/imagenes/cursoAvanzado.jpg";
+import trekkingImg from "@assets/imagenes/trekking.jpeg";
 
 export const cursosData = [
   {

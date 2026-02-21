@@ -5,7 +5,7 @@ import TarjetasCursos from '@components/TarjetasCursos.jsx';
 import { cursosData } from '@data/cursoData.js';
 
 function Cursos() {
-  // 📦 Estados de los filtros
+  // Estados de los filtros
   const [buscarPalabra, setBuscarPalabra] = useState("");
   const [min, setMin] = useState("");
   const [max, setMax] = useState("");
@@ -13,10 +13,10 @@ function Cursos() {
   const [trekking, setTrekking] = useState(false);
   const [bike, setBike] = useState(false);
 
-  // 📋 Estado para la lista mostrada
+  // Estado para la lista mostrada
   const [listaFiltrada, setListaFiltrada] = useState(cursosData);
 
-  // 🔍 Función principal de búsqueda
+  // Función principal de búsqueda
   function buscarCurso() {
     let nuevaLista = [...cursosData];
 
